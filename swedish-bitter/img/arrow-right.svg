@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="9" viewBox="0 0 31 9">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.5;
+      }
+    </style>
+  </defs>
+  <image id="стрелка" class="cls-1" width="31" height="9" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAJCAYAAADKIfe/AAAAf0lEQVQ4jcXSMQ5BURAF0INEpaCQoNAq5TeWoLcAYWtYgCXp/k90CkT1ZJJnC2PKac7MnemVUiTVGnd0P66fJWOFAxb/wK9oscc8GhH7EtOkAQbYYIRT4Fs0Sbia9hC3zIeLmuCIN86ZNx/Xhwv4glcmvsOnws9oZMY+w6NuDr78ZiAMNI8UugAAAABJRU5ErkJggg=="/>
+</svg>
