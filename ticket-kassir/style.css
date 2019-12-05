@@ -9,14 +9,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 }
-.ssfsf {
-  	background-image: url(back.png);
-	background-repeat: no-repeat;
-	background-position: left 50% top -150px;
-	background-size: 50%;
-}
 .ticket {
- 
 	width: 1000px;
 	height: 460px;
 	margin: 0 auto;
@@ -28,12 +21,12 @@ body {
 	position: absolute;
 	width: 200%;
 	height: 200%;
-	top: -87%;
-	left: 23%;
+	top: -90%;
+	left: 17%;
 	z-index: -1;
   	background-image: url(back.png);
 	background-repeat: no-repeat;
-	background-size: 26%;
+	background-size: 35%;
 	transform: rotate(-23deg);
 }
 .ticket_info {
