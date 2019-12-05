@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="container-form">
+			<form action="" class="form">
+				<div class="form__text">
+					<div class="form__text_title">
+						Заполните заявку
+					</div>
+					<div class="form__text_name">
+						<span class="form__text_input-name">Полное имя *</span>
+						<input type="text" class="form__text_input" placeholder="Введите ваше имя" id="name" >
+					</div>
+					<div class="form__text_email">
+						<span class="form__text_input-name">EMAIL *</span>
+						<input type="email" class="form__text_input" placeholder="Введите ваш email" id="email" >
+					</div>
+					<div class="form__text_phone">
+						<span class="form__text_input-name">Телефон</span>
+						<input type="text" class="form__text_input" placeholder="Введите номер телефона" id="phone" >
+					</div>
+					<!-- <div class="form__choise">
+						<span class="form__text_input-name">Выбор подписки *</span>
+						<div class="form__choise_sub">
+							<select class="form__choise_sub-select" name="subscription" id="choise-sub">
+								<option value="Эконом">
+									Эконом
+								</option>
+								<option value="Стандарт">
+									Стандарт
+								</option>
+								<option value="Премиум">
+									Премиум
+								</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="w-full dis-none js-show-service form__choise_list">
+						<div class="form__choise_item">
+							<span class="form__text_input-name">Какой тип продукции вы предпочитаете?</span>
+
+							<div class="form__choise_radio">
+								<input class="input__radio_none" id="radio1" type="radio" name="type-product" value="физические продукты" checked="checked">
+								<label class="label__radio" for="radio1">
+									Физические продукты
+								</label>
+							</div>
+
+							<div class="form__choise_radio">
+								<input class="input__radio_none" id="radio2" type="radio" name="type-product" value="диджитал продукты">
+								<label class="label__radio" for="radio2">
+									Диджитал продукты
+								</label>
+							</div>
+
+							<div class="form__choise_radio">
+								<input class="input__radio_none" id="radio3" type="radio" name="type-product" value="консультации по сервису">
+								<label class="label__radio" for="radio3">
+									Консультации по сервису
+								</label>
+							</div>
+						</div>
+
+						<div class="form__choise_range">
+							<span class="form__text_input-name">Бюджет *</span>
+
+							<div class="choise_range_list">
+								$<span id="value-lower">610</span> - $<span id="value-upper">980</span>
+								<input type="text" name="from-value">
+								<input type="text" name="to-value">
+							</div>
+
+							<div class="choise_range_bar">
+								<div id="filter-bar"></div>
+							</div>
+						</div>
+					</div> -->
+					<div class="form__text_message">
+						<span class="form__text_input-name">Сообщение</span>
+						<textarea name="message" id="message" placeholder="Начните вводить сообщение..." class="form__text_input"></textarea>
+					</div>
+				</div>
+				<div class="form__button">
+					<button class="form__button_btn" type="submit">
+						<span>
+							Отправить
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</body>
+</html>
