@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Extended+Text|Roboto:400,500,700,900&display=swap');
+* {
+
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+}
+.ssfsf {
+  	background-image: url(back.png);
+	background-repeat: no-repeat;
+	background-position: left 50% top -150px;
+	background-size: 50%;
+}
+.ticket {
+ 
+	width: 1000px;
+	height: 460px;
+	position: relative;
+	overflow: hidden;
+}
+.ticket:before {
+	content: "";
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	top: -87%;
+	left: 23%;
+	z-index: -1;
+  	background-image: url(back.png);
+	background-repeat: no-repeat;
+	background-size: 26%;
+	transform: rotate(-23deg);
+}
+.ticket_info {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.ticket_info-left {
+	width: 165px;
+}
+.ticket_info-left-item {
+	transform-origin: top left;
+	transform: rotate(-90deg);
+	position: absolute;
+	top: 460px;
+	width: 460px;
+	height: 100%;
+	padding: 12px 17px;
+}
+.ticket_info-left-item-name {
+	font-size: 10px;
+	font-weight: 700;
+	text-decoration: underline;
+	padding-left: 75px;
+	padding-right: 70px;
+	letter-spacing: -0.2px;
+}
+.ticket_info-left-item-date {
+	font-size: 10px;
+	font-weight: 700;
+	padding-left: 135px;
+	margin-bottom: 3px;
+	word-spacing: 3px;
+}
+.ticket_info-left-item-place {
+	font-size: 10px;
+	font-weight: 700;
+	padding-left: 129px;	
+}
+.ticket_info-left-item-place-seat {
+	display: flex;
+}
+.ticket_info-left-item-place-seat-ryad {
+	padding-right: 20px;
+}
+.ticket_info-left-item-place-seat-mesto {
+	margin-left: 37px;
+	margin-right: 29px;
+}
+.ticket_info-left-item-company {
+	margin-top: 23px;
+	padding-left: 5px;
+	font-size: 15px;
+	letter-spacing: -0.5px;
+}
+.ticket_info-left-item-namber {
+	display: flex;
+	margin-top: 5px;
+	letter-spacing: 0.6px;
+}
+.ticket_info-left-item-namber-1 {
+	margin-right: 23px;
+}
+.ticket_info-left-item-namber-2 {
+	margin-right: 15px;
+}
+.ticket_info-left-item-namber-3 {
+	margin-right: 14px;
+}
+.ticket_info-left-item-namber {
+	font-weight: 500;
+}
+
+
+
+
+.ticket_info-center {
+	width: 670px;
+	border-right: 1px dashed black;
+	border-left: 1px dashed black;
+}
+.ticket_info-center-item {
+	padding: 20px 20px 0px 32px;
+}
+.ticket_info-center-item-country {
+	font-size: 20px;
+	letter-spacing: -0.3px;
+	line-height: 22px;
+	height: 39px;
+	padding: 0px;
+}
+.ticket_info-center-item-requisites {
+	letter-spacing: -0.2px;
+	font-size: 14px;
+	height: 15px;
+}
+.ticket_info-center-item-requisites-2 {
+	font-size: 11px;
+	height: 25px;
+}
+.ticket_info-center-item-requisites-3 {
+	font-size: 14px;
+}
+hr {
+	color: #cc3333;
+	margin-top: 3px;
+	margin-bottom: 0px;
+	position: absolute;
+	width: 598px;
+	left: 182px;
+}
+.ticket_info-center-item-name {
+	padding-top: 4px;
+	font-size: 18px;
+	letter-spacing: 0.7px;
+}
+.ticket_info-center-item-name span {
+	letter-spacing: 1.2px;
+	word-spacing: 1px;
+}
+.ticket_info-center-item-date {
+	position: relative;
+	left: -27px;
+	display: flex;
+	justify-content: center;
+	font-size: 25px;
+	word-spacing: 2px;
+}
+.ticket_info-center-item-date span {
+	word-spacing: 7px;
+	margin-right: 22px;
+}
+.ticket_info-center-item-date-name {
+	position: relative;
+	left: -27px;
+	display: flex;
+	justify-content: center;
+	font-size: 23px;
+	letter-spacing: 0.6px;
+}
+.ticket_info-center-item-age {
+	position: absolute;
+	left: 670px;
+	top: 175px;
+	font-size: 45px;
+	font-weight: 400;
+	padding: 10px;
+	border: solid 2px black;
+	border-radius: 10px;
+}
+.ticket_info-center-item-place-sector {
+	position: relative;
+	left: 5px;
+	top: -15px;
+	font-size: 18px;
+}
+.ticket_info-center-item-place {
+	display: flex;
+	position: relative;
+	top: -12px;
+	left: 5px;
+	font-size: 18px;
+}
+.ticket_info-center-item-place div {
+	word-spacing: 12px;
+	margin-right: 36px;
+}
+.ticket_info-center-item-sponsor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	left: -10px;
+	top: -14px;
+	width: 500px;
+	height: 75px;
+}
+.ticket_info-center-item-sponsor {
+	width: 560px;
+}
+.ticket_info-center-item-sponsor img {
+	filter: grayscale(1);
+}
+.ticket_info-center-item-description {
+	position: relative;
+	left: -5px;
+	top: -22px;
+	font-size: 10px;
+	letter-spacing: 0.1px;
+	width: 580px;
+	line-height: 13.5px;
+}
+.ticket_info-center-item-order {
+	position: relative;
+	left: -16px;
+	top: -31px;
+	font-size: 13px;
+	letter-spacing: -1px;
+	font-weight: 600;
+}
+.ticket_info-center-item-name-print {
+	position: relative;
+	left: -14px;
+	top: -25px;
+	font-size: 10px;
+	letter-spacing: -0.2px;
+}
+.ticket_info-center-item-number {
+	transform-origin: top left;
+	transform: rotate(-90deg);
+	position: absolute;
+	left: 784px;
+	top: 442px;
+	width: 100%;
+}
+.ticket_info-center-item-number-2 {
+	transform-origin: top left;
+	transform: rotate(-90deg);
+	position: absolute;
+	left: 847px;
+	top: 442px;
+	width: 100%;
+}
+.ticket_info-center-item-number-item {
+	display: flex;
+}
+.ticket_info-center-item-number-2-item {
+	display: flex;
+}
+.ticket_info-center-item-number-item div {
+	word-spacing: 4px;
+	letter-spacing: -0.2px;
+	margin-right: 19px;
+}
+.ticket_info-center-item-number-2-item div {
+	word-spacing: 4px;
+	letter-spacing: -0.2px;
+	margin-right: 19px;
+}
+.ticket_info-right {
+	width: 165px;
+	padding-top: 25px;
+
+}
+.ticket_info-right-control {
+	display: flex;
+	justify-content: center;
+	font-size: 20px;
+}
+.ticket_info-right-item {
+	transform-origin: top left;
+	transform: rotate(-90deg);
+	position: absolute;
+	top: 460px;
+	width: 460px;
+	height: 100%;
+	padding:;
+}
+.ticket_info-right-item-name {
+	font-size: 10px;
+	text-decoration: underline;
+	margin-left: 40px;
+	width: 320px;
+	letter-spacing: -0.2px;
+}
+.ticket_info-right-item-date {
+	font-size: 10px;
+	position: absolute;
+	top: 13px;
+	left: 310px;
+	letter-spacing: -0.5px;
+}
+.ticket_info-right-item-place {
+	display: flex;
+	margin-top: 1px;
+	margin-left: 100px;
+	font-size: 10px;
+}
+.ticket_info-right-item-place-sector-right {
+	letter-spacing: -0.3px;
+	margin-right: 32px;
+}
+.ticket_info-right-item-place-ryad-right span {
+	margin-left: 12px;
+	margin-right: 10px;
+}
+.ticket_info-right-item-place-place-right span {
+	margin-left: 12px;
+	margin-right: 15px;
+}
+.shtrich-cod {
+	margin-left: 33px;
+}
+.shtrich-cod-number {
+	font-family: 'Libre Barcode 39 Extended Text', cursive;
+	font-size: 50px;
+	margin-left: 35px;
+	display: none;
+}
