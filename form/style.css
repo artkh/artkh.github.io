@@ -318,7 +318,6 @@ textarea.form__text_input {
 	transform: translateX(10px);
 }
 
-
 @media (max-width: 560px) {
 	.container-form {
 		padding: 60px 15px;
