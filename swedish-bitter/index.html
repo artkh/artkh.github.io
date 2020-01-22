@@ -119,22 +119,29 @@
         <div class="medicine_full-width">
             <div class="medicine__inner container">
                 <div class="medicine__inner-list">
-                    <div class="medicine__inner-list-item"><span>01.</span> Сниженный тонус, не хватает энергии</div>
-                    <div class="medicine__inner-list-item"><span>02.</span> Прыщи, бородавки и растяжки</div>
-                    <div class="medicine__inner-list-item"><span>03.</span> Слабая память и концентрация</div>
-                    <div class="medicine__inner-list-item"><span>04.</span> Болеете чаще раза в год?</div>
-                    <div class="medicine__inner-list-item"><span>05.</span> Головные боли</div>
+                    <div class="medicine__inner-list-item active"><span>01.</span> Сниженный тонус, не хватает энергии</div>
+                    <div class="medicine__inner-list-item"><span>02.</span> Прыщи, бородавки и
+                        растяжки</div>
+                    <div class="medicine__inner-list-item"><span>03.</span> Слабая память и
+                        концентрация</div>
+                    <div class="medicine__inner-list-item"><span>04.</span> Болеете чаще раза
+                        в год?</div>
+                    <div class="medicine__inner-list-item"><span>05.</span> Головные боли
+                    </div>
                     <div class="medicine__inner-list-item-group">
-                        <div class="medicine__inner-list-item"><span>06.</span> Синяки, шишки, ожоги, порезы
+                        <div class="medicine__inner-list-item"><span>06.</span> Синяки, шишки,
+                            ожоги, порезы
                         долго не проходят</div>
-                        <div class="medicine__inner-list-item"><span>08.</span> Проблемы с желудком</div>
-                        <div class="medicine__inner-list-item"><span>07.</span> Плохо засыпаете и часто
+                        <div class="medicine__inner-list-item"><span>08.</span> Проблемы с
+                            желудком</div>
+                        <div class="medicine__inner-list-item"><span>07.</span> Плохо
+                            засыпаете и часто
                         просыпаетесь</div>
                         <div class="medicine__inner-list-item"><span>09.</span> Стресс</div>
                     </div>
                 </div>
                 <div class="medicine__inner-image">
-                    <div class="medicine__inner-image-human">
+                    <div class="medicine__inner-image-human item0">
                         <img src="img/human.jpg" alt="">
                     </div>
                     <div class="medicine__inner-image-review">
@@ -679,21 +686,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        function openRev(evt, cityName) {
-            var i, tabs__content, tablinks;
-            tabs__content = document.getElementsByClassName("tabs__content");
-            for (i = 0; i < tabs__content.length; i++) {
-                tabs__content[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-    </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
