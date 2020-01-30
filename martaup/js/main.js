@@ -16,16 +16,16 @@ $(function(){
     
 });
 
+//!!!!!!!!!!!!!!!!!!!MENU BUTTON!!!!!!!!!!!!!!!!!!!
 nav__btn.onclick = function() {
     let menu = document.querySelector('.header__nav');
-    let header = document.querySelector('.header');
     this.classList.toggle('active');
     if (this.className == 'active') {
         menu.style.display = 'block';
     } else {
         menu.style.display = 'none';
     }
-}
+};
 window.addEventListener('scroll', function(){
     let menu = document.querySelector('.header__nav');
     if (document.body.clientWidth < 690) {
@@ -33,3 +33,29 @@ window.addEventListener('scroll', function(){
         nav__btn.className = '';
     }
 });
+
+//!!!!!!!!!!!!!!!!!!!FEATURES ANIMATION!!!!!!!!!!!!!!!!!!!
+function featuresAnimation() {
+    let featuresAnim = document.querySelectorAll('.features__image > svg > rect');
+    let workAnim = document.querySelectorAll('.work__image > svg > rect');
+    featuresAnim[1].setAttribute('transform', 'matrix(0.875951 -0.482401 0.517808 0.855497 -400 247.243)');
+    featuresAnim[2].setAttribute('transform', 'matrix(0.875951 -0.482401 0.517808 0.855497 -400 318.926)');
+    featuresAnim[0].setAttribute('transform', 'matrix(0.875951 -0.482401 0.517808 0.855497 -400 398.641)');
+    workAnim[0].setAttribute('transform', 'matrix(-0.878059 -0.495785 0.504134 -0.853958 600 459.813)');
+    workAnim[2].setAttribute('transform', 'matrix(-0.878059 -0.495785 0.504134 -0.853958 600 528.07)');
+    workAnim[1].setAttribute('transform', 'matrix(-0.878059 -0.495785 0.504134 -0.853958 600 590.478)');
+
+}
+setInterval(featuresAnimation, 2000);
+
+function featuresAnimationReverse() {
+    let featuresAnim = document.querySelectorAll('.features__image > svg > rect');
+    let workAnim = document.querySelectorAll('.work__image > svg > rect');
+    featuresAnim[1].setAttribute('transform', 'matrix(0.875951 -0.482401 0.517808 0.855497 -339 217.243)');
+    featuresAnim[2].setAttribute('transform', 'matrix(0.875951 -0.482401 0.517808 0.855497 -267.724 245.926)');
+    featuresAnim[0].setAttribute('transform', 'matrix(0.875951 -0.482401 0.517808 0.855497 -294.06 348.641)');
+    workAnim[0].setAttribute('transform', 'matrix(-0.878059 -0.495785 0.504134 -0.853958 489.815 399.813)');
+    workAnim[2].setAttribute('transform', 'matrix(-0.878059 -0.495785 0.504134 -0.853958 398.337 413.07)');
+    workAnim[1].setAttribute('transform', 'matrix(-0.878059 -0.495785 0.504134 -0.853958 406.954 480.478)');
+}
+setInterval(featuresAnimationReverse, 4000);
