@@ -1065,4 +1065,8 @@ a {
     display: none; }
   .catalog {
     -ms-flex-pack: distribute;
-        justify-content: space-around; } }
+        justify-content: space-around; }
+    .catalog__item:hover {
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none; } }
