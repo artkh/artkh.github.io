@@ -363,23 +363,30 @@ a {
       background: -webkit-gradient(linear, left bottom, left top, color-stop(30.64%, rgba(34, 34, 34, 0.85)), color-stop(81.78%, rgba(38, 38, 38, 0)));
       background: -o-linear-gradient(bottom, rgba(34, 34, 34, 0.85) 30.64%, rgba(38, 38, 38, 0) 81.78%);
       background: linear-gradient(0deg, rgba(34, 34, 34, 0.85) 30.64%, rgba(38, 38, 38, 0) 81.78%);
-      border-radius: 4px; }
-    .box__item:hover::before {
-      background: -webkit-gradient(linear, left bottom, left top, color-stop(30.64%, rgba(0, 0, 0, 0.85)), color-stop(81.78%, rgba(38, 38, 38, 0)));
-      background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.85) 30.64%, rgba(38, 38, 38, 0) 81.78%);
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 30.64%, rgba(38, 38, 38, 0) 81.78%); }
+      border-radius: 4px;
+      z-index: 11; }
     .box__item-image {
-      overflow: hidden; }
+      overflow: hidden;
+      position: relative;
+      z-index: 10; }
       .box__item-image img {
         width: 100%;
-        display: block; }
+        display: block;
+        -webkit-transition: .5s transform;
+        -o-transition: .5s transform;
+        transition: .5s transform; }
+    .box__item:hover .box__item-image > img {
+      -webkit-transform: scale(1.1, 1.1);
+          -ms-transform: scale(1.1, 1.1);
+              transform: scale(1.1, 1.1); }
     .box__item-info {
       position: absolute;
       left: 0;
       bottom: 0;
       padding-left: 16px;
       padding-right: 16px;
-      padding-bottom: 12px; }
+      padding-bottom: 12px;
+      z-index: 12; }
       .box__item-info-title {
         font-size: 16px;
         font-weight: 700;
@@ -393,10 +400,10 @@ a {
   .box__item {
     max-width: 290px;
     width: 100%; }
-    .box__item:hover::before {
-      background: -webkit-gradient(linear, left bottom, left top, color-stop(30.64%, rgba(34, 34, 34, 0.85)), color-stop(81.78%, rgba(38, 38, 38, 0)));
-      background: -o-linear-gradient(bottom, rgba(34, 34, 34, 0.85) 30.64%, rgba(38, 38, 38, 0) 81.78%);
-      background: linear-gradient(0deg, rgba(34, 34, 34, 0.85) 30.64%, rgba(38, 38, 38, 0) 81.78%); } }
+    .box__item:hover .box__item-image > img {
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none; } }
 
 @media (max-width: 480px) {
   .container {
