@@ -385,6 +385,8 @@ a {
         font-weight: 700;
         line-height: 24px;
         margin-bottom: 4px; }
+        .box__item-info-title .rub {
+          font-family: Arial, Helvetica, sans-serif; }
       .box__item-info-description {
         font-size: 12px;
         line-height: 18px; }
