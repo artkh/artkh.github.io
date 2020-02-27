@@ -907,11 +907,12 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  padding-left: 32px;
+  padding-right: 32px; }
   .catalog__item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -921,22 +922,19 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 216px;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
+    margin-right: 12px;
+    margin-left: 12px;
     position: relative;
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s; }
-    .catalog__item:hover {
-      -webkit-transform: translateY(-3px);
-          -ms-transform: translateY(-3px);
-              transform: translateY(-3px); }
+    .catalog__item:hover .catalog__item-title {
+      color: #005bff; }
     .catalog__item-image {
       position: relative;
       min-height: 216px;
       width: 100%;
-      background-repeat: no-repeat;
-      background-size: 200px 200px;
-      background-position: center center;
       padding: 8px;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -946,11 +944,16 @@ a {
               justify-content: center;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; }
+              align-items: center;
+      overflow: hidden; }
       .catalog__item-image img {
         max-width: 200px;
         max-height: 200px;
-        display: block; }
+        display: block;
+        background-image: url(https://via.placeholder.com/200);
+        background-repeat: no-repeat;
+        background-size: 200px 200px;
+        background-position: center; }
       .catalog__item-image .discount {
         position: absolute;
         bottom: 8px;
@@ -1062,11 +1065,4 @@ a {
 
 @media (max-width: 666px) {
   .header__nav {
-    display: none; }
-  .catalog {
-    -ms-flex-pack: distribute;
-        justify-content: space-around; }
-    .catalog__item:hover {
-      -webkit-transform: none;
-          -ms-transform: none;
-              transform: none; } }
+    display: none; } }

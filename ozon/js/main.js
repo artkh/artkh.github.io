@@ -10,15 +10,33 @@ spacePrice();
 // Конец пробелы
 
 // Кнопка добавления в корзину
-let buttonBusket = document.querySelectorAll('.basket-button');
-for (let i = 0; i < buttonBusket.length; i++) {
-    buttonBusket[i].addEventListener('click', function () {
+let buttonBasket = document.querySelectorAll('.basket-button');
+for (let i = 0; i < buttonBasket.length; i++) {
+    buttonBasket[i].addEventListener('click', function () {
+        localStorage.setItem(i, 'inBasket');
         this.classList.add('in-basket');
         this.innerHTML = 'В корзине';
         let inBasket = document.querySelectorAll('.in-basket');
         basket.querySelector('span').innerHTML = inBasket.length; // Пополнение корзины в хидере
     });
 }
+
+window.addEventListener('DOMContentLoaded', function() {
+    for (let i = 0; i < localStorage.length; i++) {
+        let key = localStorage.key(i);
+        buttonBasket[key].classList.add('in-basket');
+        buttonBasket[key].innerHTML = 'В корзине';
+        let inBasket = document.querySelectorAll('.in-basket');
+        basket.querySelector('span').innerHTML = inBasket.length;
+    }
+
+    //очистка корзины
+    basket.addEventListener('click', function() {
+        localStorage.clear();
+        location.reload();
+    });
+    //конец очистки корзины
+});
 // Конец кнопки добавления
 
 // хедер навигация
@@ -45,6 +63,10 @@ function calcDiscount() {
             let calcPercent = standartPrice - (standartPrice / 100 * percent); //рассчитываю цену с учетом скидки
             let totalCalc = Math.floor((calcPercent * 100) / 100); //убираю знаки после запятой
             discountIn[i].innerHTML = totalCalc + '&thinsp;₽'; // сумма с учетом скидки вставлена
+            // if(totalCalc > 9999) {
+            //     let p = discountIn[i].innerHTML.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 '); // возвращаю пробелы в цене
+            //     discountIn[i].innerHTML = p;
+            // }
             let p = discountIn[i].innerHTML.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 '); // возвращаю пробелы в цене
             discountIn[i].innerHTML = p;
         }
