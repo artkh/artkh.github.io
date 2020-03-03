@@ -109,3 +109,12 @@ function textCropping() {
 }
 textCropping();
 // Обрезка конец
+
+// кол-во товаров на странице
+function calcProduct() {
+    let product = document.querySelectorAll('.catalog__item');
+    let amount = document.querySelector('.title__amount');
+    amount.innerHTML = product.length + ' товаров';
+}
+calcProduct();
+// кол-во товаров конец
