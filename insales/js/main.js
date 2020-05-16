@@ -7,8 +7,8 @@ $(function() {
         autoplay: true,
         autoplaySpeed: 2000,
         adaptiveHeight: true,
-        prevArrow: '<img class="slider-arrows slider-arrows__left" src="../img/arrow-circle-left.png" alt="">',
-        nextArrow: '<img class="slider-arrows slider-arrows__right" src="../img/arrow-circle-right.png" alt="">',
+        prevArrow: '<img class="slider-arrows slider-arrows__left" src="img/arrow-circle-left.png" alt="">',
+        nextArrow: '<img class="slider-arrows slider-arrows__right" src="img/arrow-circle-right.png" alt="">',
         responsive: [{
             breakpoint: 481,
             settings: {
@@ -25,8 +25,8 @@ $(function() {
         swipe: false,
         touchMove: false,
         zIndex: 0,
-        prevArrow: '<img class="catalog-arrows catalog-arrows__left" src="../img/arrow-left.png" alt="">',
-        nextArrow: '<img class="catalog-arrows catalog-arrows__right" src="../img/arrow-right.png" alt="">',
+        prevArrow: '<img class="catalog-arrows catalog-arrows__left" src="img/arrow-left.png" alt="">',
+        nextArrow: '<img class="catalog-arrows catalog-arrows__right" src="img/arrow-right.png" alt="">',
         responsive: [{
             breakpoint: 481,
             settings: {
