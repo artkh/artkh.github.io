@@ -1,5 +1,6 @@
 $(function() {
 
+//верхний слайдер новостей
     $('.slider').slick({
         infinite: true,
         fade: true,
@@ -19,6 +20,7 @@ $(function() {
         
     });
 
+//сладер каталога
     $('.catalog__items').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -38,8 +40,7 @@ $(function() {
     });
 });
 
-
-
+//табы для переключения каталогов
 let tabItem = document.querySelector('.catalog__title').querySelectorAll('a');
 for (let i = 0; i < tabItem.length; i++) {
     tabItem[i].addEventListener('click', function () {
@@ -52,6 +53,7 @@ for (let i = 0; i < tabItem.length; i++) {
         let rating = document.querySelector('.wrapper__rating');
         let recomend = document.querySelector('.wrapper__recomend');
 
+        //display: none некорректно работает для подключенного сладера
         if (this.classList.contains('catalog__title-features')) {
             features.style.transform = 'translate(0, -100%)';
             rating.style.transform = 'translateX(-10000px)';
@@ -67,5 +69,17 @@ for (let i = 0; i < tabItem.length; i++) {
         }
     });
 }
+
+//выпадающее меню в навигации
+let dropDownButton = document.querySelector('.header__nav-catalog');
+let dropDownMenu = document.querySelector('.dropdown-menu');
+dropDownButton.addEventListener('click', function() {
+    dropDownMenu.classList.toggle('active');
+});
+window.addEventListener('scroll', function() {
+    dropDownMenu.classList.remove('active');
+});
+
+
 
 
