@@ -8,6 +8,7 @@ $(function() {
         autoplay: true,
         autoplaySpeed: 2000,
         adaptiveHeight: true,
+        lazyLoad: 'ondemand',
         prevArrow: '<img class="slider-arrows slider-arrows__left" src="img/arrow-circle-left.png" alt="">',
         nextArrow: '<img class="slider-arrows slider-arrows__right" src="img/arrow-circle-right.png" alt="">',
         responsive: [{
@@ -27,6 +28,7 @@ $(function() {
         swipe: false,
         touchMove: false,
         zIndex: 0,
+        lazyLoad: 'ondemand',
         prevArrow: '<img class="catalog-arrows catalog-arrows__left" src="img/arrow-left.png" alt="">',
         nextArrow: '<img class="catalog-arrows catalog-arrows__right" src="img/arrow-right.png" alt="">',
         responsive: [{
@@ -40,46 +42,58 @@ $(function() {
     });
 });
 
-//табы для переключения каталогов
-let tabItem = document.querySelector('.catalog__title').querySelectorAll('a');
-for (let i = 0; i < tabItem.length; i++) {
-    tabItem[i].addEventListener('click', function () {
-        for (let j = 0; j < tabItem.length; j++) {
-            tabItem[j].classList.remove('active');
-        }
-        this.classList.add('active');
 
-        let features = document.querySelector('.wrapper__features');
-        let rating = document.querySelector('.wrapper__rating');
-        let recomend = document.querySelector('.wrapper__recomend');
+window.addEventListener('DOMContentLoaded', function () {
 
-        //display: none некорректно работает для подключенного сладера
-        if (this.classList.contains('catalog__title-features')) {
-            features.style.transform = 'translate(0, -100%)';
-            rating.style.transform = 'translateX(-10000px)';
-            recomend.style.transform = 'translateX(-10000px)';
-        } else if (this.classList.contains('catalog__title-rating')) {
-            features.style.transform = 'translateX(-10000px)';
-            rating.style.transform = 'translate(0, 0)';
-            recomend.style.transform = 'translateX(-10000px)';
-        } else if (this.classList.contains('catalog__title-recomend')) {
-            features.style.transform = 'translateX(-10000px)';
-            rating.style.transform = 'translateX(-10000px)';
-            recomend.style.transform = 'translate(0, -200%)';
+    //табы для переключения каталогов
+    let tabItem = document.querySelector('.catalog__title').querySelectorAll('a');
+    let tabCatalog = document.querySelectorAll('.catalog__items');
+
+    for (let i = 0; i < tabItem.length; i++) {
+
+        if (tabItem[i].classList.contains('active')) {
+            tabCatalog[i].classList.add('active');
         }
-    });
-}
+
+        tabItem[i].addEventListener('click', function () {
+
+            for (let j = 0; j < tabItem.length; j++) {
+                tabItem[j].classList.remove('active');
+                tabCatalog[j].classList.remove('active');
+            }
+
+            this.classList.add('active');
+
+            if (tabItem[i].classList.contains('active')) {
+                tabCatalog[i].classList.add('active');
+            }
+            
+        });
+    }
+})
+
+
 
 //выпадающее меню в навигации
-let dropDownButton = document.querySelector('.header__nav-catalog');
-let dropDownMenu = document.querySelector('.dropdown-menu');
-dropDownButton.addEventListener('click', function() {
-    dropDownMenu.classList.toggle('active');
-});
-window.addEventListener('scroll', function() {
-    dropDownMenu.classList.remove('active');
-});
+// let dropDownButton = document.querySelector('.header__nav-catalog');
+// let dropDownMenu = document.querySelector('.dropdown-menu');
+// dropDownButton.addEventListener('click', function() {
+//     dropDownMenu.classList.toggle('active');
+// });
+// window.addEventListener('scroll', function() {
+//     dropDownMenu.classList.remove('active');
+// });
 
+//кнопка поиска
+let searchButton = document.querySelector('.header__nav-search');
+let searchForm = document.querySelector('.form__search');
+let searchFormClose = document.querySelector('.form__search').querySelector('button');
+searchButton.addEventListener('click', function() {
+    searchForm.classList.toggle('active');
+})
+searchFormClose.addEventListener('click', function () {
+    searchForm.classList.remove('active');
+})
 
 
 

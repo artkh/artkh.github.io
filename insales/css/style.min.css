@@ -787,7 +787,6 @@ html {
 
 body {
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  background-color: #e5e5e5;
   color: #000; }
 
 .container {
@@ -905,10 +904,41 @@ a {
             display: block;
             padding: 10px; }
             .header__nav ul li .dropdown-menu li a:hover {
-              background-color: orange;
+              background-color: #ef7f1a;
               color: #fff; }
-        .header__nav ul li .dropdown-menu.active {
+        .header__nav ul li:hover .dropdown-menu {
           display: block; }
+        .header__nav ul li .form__search {
+          display: none; }
+          .header__nav ul li .form__search.active {
+            display: block; }
+          .header__nav ul li .form__search input {
+            position: absolute;
+            right: calc(100% + 10px);
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
+            z-index: 1;
+            width: 500px;
+            line-height: 30px;
+            font-size: 20px;
+            border: 1px solid #ef7f1a;
+            padding: 5px 20px 5px 5px; }
+          .header__nav ul li .form__search button {
+            position: absolute;
+            right: calc(100% + 20px);
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
+            z-index: 2;
+            padding: 0;
+            color: lightgray;
+            font-size: 30px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer; }
     .header__nav-search, .header__nav-basket {
       width: 20px;
       height: 23px;
@@ -1070,7 +1100,6 @@ a {
 
 .catalog {
   padding-bottom: 50px;
-  height: 850px;
   overflow: hidden;
   position: relative; }
   .catalog__title {
@@ -1083,24 +1112,23 @@ a {
     .catalog__title a:hover {
       color: #ef7f1a;
       border-bottom: 2px solid #ef7f1a; }
-  .catalog .wrapper__rating,
-  .catalog .wrapper__features,
-  .catalog .wrapper__recomend {
-    -webkit-transform: translate(-10000px, 0px);
-        -ms-transform: translate(-10000px, 0px);
-            transform: translate(-10000px, 0px); }
-  .catalog .wrapper__rating {
-    -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-            transform: translate(0, 0); }
+  .catalog__items.active {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    position: relative; }
   .catalog__items {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    -webkit-transform: translateX(-10000px);
+        -ms-transform: translateX(-10000px);
+            transform: translateX(-10000px); }
     .catalog__items .item {
       width: calc(100%/4 - 15px);
       position: relative; }
@@ -1299,25 +1327,23 @@ a {
     font-size: 24px; }
   .categories__box .item__info h3 {
     font-size: 20px; }
-  .catalog {
-    height: 650px; }
-    .catalog__title a {
-      font-size: 24px; }
-    .catalog__items .item__inner .item__image {
-      height: 300px; }
-      .catalog__items .item__inner .item__image-subinfo {
-        top: 10%; }
-    .catalog__items .item__inner .item__info .title {
-      font-size: 20px; }
-    .catalog__items .item__inner .item__size__price .price__info {
-      font-size: 24px; }
-    .catalog__items .item__inner .item__size__price .price .in-basket {
-      margin: 0;
-      margin-left: 10px; }
-    .catalog__items .item__inner .item__hover-inner .table {
-      margin-bottom: 20px; }
-      .catalog__items .item__inner .item__hover-inner .table td {
-        padding: 5px 15px; } }
+  .catalog__title a {
+    font-size: 24px; }
+  .catalog__items .item__inner .item__image {
+    height: 300px; }
+    .catalog__items .item__inner .item__image-subinfo {
+      top: 10%; }
+  .catalog__items .item__inner .item__info .title {
+    font-size: 20px; }
+  .catalog__items .item__inner .item__size__price .price__info {
+    font-size: 24px; }
+  .catalog__items .item__inner .item__size__price .price .in-basket {
+    margin: 0;
+    margin-left: 10px; }
+  .catalog__items .item__inner .item__hover-inner .table {
+    margin-bottom: 20px; }
+    .catalog__items .item__inner .item__hover-inner .table td {
+      padding: 5px 15px; } }
 
 @media (max-width: 768px) {
   .header__logo {
@@ -1338,6 +1364,8 @@ a {
       display: block;
       height: 15px;
       width: 15px; }
+    .header__nav-section ul li .form__search input {
+      width: 285px; }
   .offer__box .slider {
     height: 350px; }
     .offer__box .slider__item {
@@ -1354,47 +1382,45 @@ a {
     font-size: 14px; }
   .categories__box .item__info h3 {
     font-size: 16px; }
-  .catalog {
-    height: 550px; }
-    .catalog__title a {
-      font-size: 20px;
-      line-height: 24px; }
-    .catalog__items .item__inner .item__image {
-      height: 221px;
-      margin-bottom: 10px; }
-      .catalog__items .item__inner .item__image-subinfo {
-        top: 10%; }
-        .catalog__items .item__inner .item__image-subinfo .country__info {
-          margin-bottom: 8px; }
-    .catalog__items .item__inner .item__info .title {
-      font-size: 18px;
-      margin-bottom: 10px; }
-    .catalog__items .item__inner .item__info .description {
-      font-size: 14px;
-      margin-bottom: 10px; }
-    .catalog__items .item__inner .item__size__price .sizes__item {
-      font-size: 14px;
-      line-height: 25px; }
-    .catalog__items .item__inner .item__size__price .sizes__title {
-      font-size: 16px; }
-    .catalog__items .item__inner .item__size__price .price {
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-      .catalog__items .item__inner .item__size__price .price__info {
+  .catalog__title a {
+    font-size: 20px;
+    line-height: 24px; }
+  .catalog__items .item__inner .item__image {
+    height: 221px;
+    margin-bottom: 10px; }
+    .catalog__items .item__inner .item__image-subinfo {
+      top: 10%; }
+      .catalog__items .item__inner .item__image-subinfo .country__info {
+        margin-bottom: 8px; }
+  .catalog__items .item__inner .item__info .title {
+    font-size: 18px;
+    margin-bottom: 10px; }
+  .catalog__items .item__inner .item__info .description {
+    font-size: 14px;
+    margin-bottom: 10px; }
+  .catalog__items .item__inner .item__size__price .sizes__item {
+    font-size: 14px;
+    line-height: 25px; }
+  .catalog__items .item__inner .item__size__price .sizes__title {
+    font-size: 16px; }
+  .catalog__items .item__inner .item__size__price .price {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .catalog__items .item__inner .item__size__price .price__info {
+      font-size: 18px; }
+      .catalog__items .item__inner .item__size__price .price__info .old-price {
         font-size: 18px; }
-        .catalog__items .item__inner .item__size__price .price__info .old-price {
-          font-size: 18px; }
-      .catalog__items .item__inner .item__size__price .price .in-basket {
-        width: 20px;
-        height: 20px;
-        background-size: contain; }
-    .catalog__items .item__inner .item__hover-inner .table {
-      margin-bottom: 10px;
-      font-size: 12px; }
-      .catalog__items .item__inner .item__hover-inner .table td {
-        padding: 3px 10px; }
-    .catalog__items .item__inner .item__hover-inner a {
-      font-size: 12px; } }
+    .catalog__items .item__inner .item__size__price .price .in-basket {
+      width: 20px;
+      height: 20px;
+      background-size: contain; }
+  .catalog__items .item__inner .item__hover-inner .table {
+    margin-bottom: 10px;
+    font-size: 12px; }
+    .catalog__items .item__inner .item__hover-inner .table td {
+      padding: 3px 10px; }
+  .catalog__items .item__inner .item__hover-inner a {
+    font-size: 12px; } }
 
 @media (max-width: 480px) {
   .container {
@@ -1421,9 +1447,10 @@ a {
         right: 8px;
         background-size: contain;
         height: 10px; }
-    .header__nav-section ul li .header__nav-search,
     .header__nav-section ul li .header__nav-basket {
       margin-left: 20px; }
+    .header__nav-section ul li .form__search input {
+      width: 150px; }
   .offer__box {
     display: block; }
     .offer__box .slider {
@@ -1463,56 +1490,54 @@ a {
       width: 100%; }
   .categories__box .item__info h3 {
     font-size: 10px; }
-  .catalog {
-    height: 450px; }
-    .catalog__title a {
-      font-size: 16px;
-      line-height: 24px;
-      margin-right: 10px; }
-    .catalog__items .catalog-arrows {
-      top: -15px;
-      width: 20px; }
-    .catalog__items .catalog-arrows__left {
-      right: 30px; }
-    .catalog__items .item__inner {
-      padding: 0 5px; }
-      .catalog__items .item__inner .item__image {
-        height: 180px;
-        margin-bottom: 10px; }
-        .catalog__items .item__inner .item__image-subinfo {
-          top: 10%;
-          left: 10%; }
-          .catalog__items .item__inner .item__image-subinfo .country__info {
-            margin-bottom: 5px;
-            width: 10px;
-            height: 10px;
-            background-size: contain; }
-          .catalog__items .item__inner .item__image-subinfo .relevance__info {
-            font-size: 10px;
-            padding: 3px 5px; }
-      .catalog__items .item__inner .item__info .title {
-        font-size: 14px; }
-      .catalog__items .item__inner .item__info .description {
-        font-size: 12px; }
-      .catalog__items .item__inner .item__size__price .sizes__item {
-        font-size: 12px;
-        line-height: 20px; }
-      .catalog__items .item__inner .item__size__price .sizes__title {
-        font-size: 14px; }
-      .catalog__items .item__inner .item__size__price .price {
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; }
-        .catalog__items .item__inner .item__size__price .price__info {
-          font-size: 16px; }
-          .catalog__items .item__inner .item__size__price .price__info .old-price {
-            font-size: 16px; }
-        .catalog__items .item__inner .item__size__price .price .in-basket {
-          width: 18px;
-          height: 18px;
+  .catalog__title a {
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 10px; }
+  .catalog__items .catalog-arrows {
+    top: -15px;
+    width: 20px; }
+  .catalog__items .catalog-arrows__left {
+    right: 30px; }
+  .catalog__items .item__inner {
+    padding: 0 5px; }
+    .catalog__items .item__inner .item__image {
+      height: 180px;
+      margin-bottom: 10px; }
+      .catalog__items .item__inner .item__image-subinfo {
+        top: 10%;
+        left: 10%; }
+        .catalog__items .item__inner .item__image-subinfo .country__info {
+          margin-bottom: 5px;
+          width: 10px;
+          height: 10px;
           background-size: contain; }
-      .catalog__items .item__inner .item__hover-inner {
-        top: 20%; }
-        .catalog__items .item__inner .item__hover-inner .table {
-          font-size: 10px; }
-        .catalog__items .item__inner .item__hover-inner a {
-          font-size: 10px; } }
+        .catalog__items .item__inner .item__image-subinfo .relevance__info {
+          font-size: 10px;
+          padding: 3px 5px; }
+    .catalog__items .item__inner .item__info .title {
+      font-size: 14px; }
+    .catalog__items .item__inner .item__info .description {
+      font-size: 12px; }
+    .catalog__items .item__inner .item__size__price .sizes__item {
+      font-size: 12px;
+      line-height: 20px; }
+    .catalog__items .item__inner .item__size__price .sizes__title {
+      font-size: 14px; }
+    .catalog__items .item__inner .item__size__price .price {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      .catalog__items .item__inner .item__size__price .price__info {
+        font-size: 16px; }
+        .catalog__items .item__inner .item__size__price .price__info .old-price {
+          font-size: 16px; }
+      .catalog__items .item__inner .item__size__price .price .in-basket {
+        width: 18px;
+        height: 18px;
+        background-size: contain; }
+    .catalog__items .item__inner .item__hover-inner {
+      top: 20%; }
+      .catalog__items .item__inner .item__hover-inner .table {
+        font-size: 10px; }
+      .catalog__items .item__inner .item__hover-inner a {
+        font-size: 10px; } }
