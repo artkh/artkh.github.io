@@ -490,6 +490,30 @@ img.mfp-img {
   font-weight: bold;
   font-style: italic; }
 
+@font-face {
+  font-family: 'Heuristica';
+  src: local("Heuristica Regular"), local("Heuristica-Regular"), url("/local/templates/design2020/css/fonts/heuristicaregular.woff2") format("woff2"), url("/local/templates/design2020/css/fonts/heuristicaregular.woff") format("woff"), url("/local/templates/design2020/css/fonts/heuristicaregular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Heuristica';
+  src: local("Heuristica Italic"), local("Heuristica-Italic"), url("/local/templates/design2020/css/fonts/heuristicaitalic.woff2") format("woff2"), url("/local/templates/design2020/css/fonts/heuristicaitalic.woff") format("woff"), url("/local/templates/design2020/css/fonts/heuristicaitalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Heuristica';
+  src: local("Heuristica Bold"), local("Heuristica-Bold"), url("/local/templates/design2020/css/fonts/heuristicabold.woff2") format("woff2"), url("/local/templates/design2020/css/fonts/heuristicabold.woff") format("woff"), url("/local/templates/design2020/css/fonts/heuristicabold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Heuristica';
+  src: local("Heuristica Bold Italic"), local("Heuristica-BoldItalic"), url("/local/templates/design2020/css/fonts/heuristicabolditalic.woff2") format("woff2"), url("/local/templates/design2020/css/fonts/heuristicabolditalic.woff") format("woff"), url("/local/templates/design2020/css/fonts/heuristicabolditalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic; }
+
 :root {
   --dark: #484848;
   --dark-light: #E5E5E5;
@@ -788,12 +812,12 @@ header .container:after {
   border-left: 2px solid #fff;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-  background-image: url(https://help-point.net/local/templates/design2020/img/arrow-white.svg);
+  background-image: url(/local/templates/design2020/img/arrow-white.svg);
   background-repeat: no-repeat;
   background-position: 52% 50%; }
 
 .btn-arrow:hover:after {
-  background-image: url(https://help-point.net/local/templates/design2020/img/arrow-orng.svg);
+  background-image: url(/local/templates/design2020/img/arrow-orng.svg);
   border-left: 2px solid var(--orng); }
 
 .link-arrow {
@@ -806,7 +830,7 @@ header .container:after {
   margin-top: 5px;
   margin-bottom: 10px;
   display: inline-block;
-  background: url(https://help-point.net/local/templates/design2020/img/arrow-orng.svg) no-repeat 100% 0; }
+  background: url(/local/templates/design2020/img/arrow-orng.svg) no-repeat 100% 0; }
 
 .header__user {
   display: none;
@@ -1083,6 +1107,211 @@ ul.user__menu {
 ul.user__menu li a {
   display: block;
   padding: 5px 0; }
+
+.note {
+  width: 25px;
+  height: 25px;
+  position: relative; }
+  .note::before {
+    content: url(../img/note.svg);
+    width: 100%;
+    height: 100%;
+    position: absolute; }
+  .note span {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 200px;
+    min-height: 30px;
+    padding: 20px;
+    visibility: hidden;
+    overflow: hidden;
+    word-wrap: break-word;
+    font-size: var(--s-size);
+    line-height: var(--s-line-height);
+    background-color: var(--orng);
+    color: #fff;
+    border-radius: 5px;
+    opacity: 0;
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out; }
+  .note:hover span {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10; }
+
+h1 + .small-heading {
+  max-width: 515px;
+  margin: -15px auto 10px; }
+
+.form {
+  width: 100%;
+  max-width: 509px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  padding: 2px 0; }
+
+.form__item {
+  width: 100%;
+  position: relative; }
+
+.form label {
+  display: block;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: left;
+  position: absolute;
+  color: #C0C0C0;
+  z-index: 0;
+  -webkit-transition: color .3s ease, top .3s ease, font-size .3s ease;
+  -o-transition: color .3s ease, top .3s ease, font-size .3s ease;
+  transition: color .3s ease, top .3s ease, font-size .3s ease; }
+
+.form input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 10px auto 0;
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-bottom: 1px solid #C0C0C0;
+  z-index: 3;
+  -webkit-transition: border-color .3s ease;
+  -o-transition: border-color .3s ease;
+  transition: border-color .3s ease;
+  outline: none; }
+
+.form textarea {
+  width: 100%;
+  height: 97px;
+  margin-top: 25px;
+  padding: 15px 30px;
+  background-color: var(--light);
+  border-color: var(--orng);
+  resize: none; }
+
+textarea::-webkit-input-placeholder {
+  color: #c0c0c0;
+  font-size: 16px; }
+
+textarea::-moz-placeholder {
+  color: #c0c0c0;
+  font-size: 16px; }
+
+textarea:-ms-input-placeholder {
+  color: #c0c0c0;
+  font-size: 16px; }
+
+textarea::-ms-input-placeholder {
+  color: #c0c0c0;
+  font-size: 16px; }
+
+textarea::placeholder {
+  color: #c0c0c0;
+  font-size: 16px; }
+
+.form input:focus + label,
+.form .filled label {
+  font-size: 12px;
+  top: 0; }
+
+.form .filled label {
+  color: var(--dark); }
+
+.form .error label,
+.form .error input {
+  color: var(--red);
+  border-color: var(--red); }
+
+.form [type="submit"] {
+  min-width: 183px;
+  min-height: 49px;
+  margin-top: 40px;
+  display: inline-block; }
+
+.form [type="submit"]:not(.btn-arrow) {
+  margin-top: 20px; }
+
+.oferta-text {
+  font-size: 13px;
+  line-height: 15px;
+  max-width: 300px;
+  margin: 10px auto; }
+
+.success {
+  display: none;
+  width: calc(100% - 30px);
+  max-width: 465px;
+  padding: 50px 20px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 5px; }
+
+.success .btn {
+  margin: 32px auto 0; }
+
+.success-sent {
+  overflow: hidden; }
+
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #c0c0c0;
+  display: inline-block; }
+
+input[type=checkbox].error {
+  border-color: red; }
+
+[type=checkbox] + label {
+  display: inline-block;
+  position: relative;
+  top: unset !important;
+  left: unset;
+  font-size: 14px !important;
+  vertical-align: bottom;
+  width: calc(100% - 30px);
+  margin-left: 10px;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none; }
+
+[type=checkbox]:checked + label::before {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: var(--orng);
+  position: absolute;
+  top: calc(50% + 2px);
+  left: -27px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+[type=checkbox] + label > a {
+  color: var(--dark); }
 
 .youtube_old {
   position: relative;
@@ -2155,7 +2384,9 @@ ul.how-it-works {
   display: none; }
 
 .faq__page {
-  text-align: center; }
+  text-align: center;
+  padding-top: 110px;
+  padding-bottom: 40px; }
 
 .faq__title {
   margin-bottom: 50px; }
@@ -2248,6 +2479,109 @@ ul.how-it-works {
         line-height: var(--m-line-height); }
       .faq__box .faq__slidercontent_item_description.active {
         display: block; }
+
+.for_psyhologist__headtext {
+  max-width: 653px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  text-align: center; }
+  .for_psyhologist__headtext_title {
+    margin-bottom: 10px; }
+  .for_psyhologist__headtext_desc {
+    font-size: var(--l2-size);
+    line-height: var(--l2-line-height);
+    color: #000; }
+    .for_psyhologist__headtext_desc:not(:last-child) {
+      margin-bottom: 10px; }
+
+.for_psyhologist__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 50px; }
+  .for_psyhologist__box_item {
+    width: calc((100%/3) - 30px);
+    padding: 40px 28px;
+    border: 1px solid var(--orng);
+    border-radius: 5px; }
+    .for_psyhologist__box_item_image {
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      padding: 24px;
+      margin: 0 auto;
+      margin-bottom: 14px;
+      border: 1px solid var(--orng);
+      border-radius: 15px; }
+      .for_psyhologist__box_item_image img {
+        width: 100%; }
+    .for_psyhologist__box_item_info_title {
+      margin-bottom: 14px;
+      font-size: var(--l2-size);
+      line-height: var(--l2-line-height);
+      text-align: center; }
+    .for_psyhologist__box_item_info_list_item {
+      font-size: var(--l-size);
+      line-height: var(--l-line-height);
+      color: #000;
+      padding-left: 42px;
+      position: relative; }
+      .for_psyhologist__box_item_info_list_item::before {
+        content: url(../img/ok_orange.svg);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 25px;
+        height: 25px; }
+      .for_psyhologist__box_item_info_list_item:not(:last-child) {
+        margin-bottom: 15px; }
+      .for_psyhologist__box_item_info_list_item .note {
+        position: absolute;
+        top: 0;
+        right: 50px;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
+    .for_psyhologist__box_item:last-child .for_psyhologist__box_item_info_list {
+      counter-reset: section; }
+      .for_psyhologist__box_item:last-child .for_psyhologist__box_item_info_list_item::before {
+        background: none;
+        background-color: var(--orng);
+        border-radius: 50%;
+        counter-increment: section;
+        content: counter(section);
+        font-size: var(--l-size);
+        line-height: 30px;
+        color: #fff;
+        text-align: center; }
+
+.for_psyhologist .form .btn {
+  max-width: 394px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-size: 24px;
+  line-height: 28px; }
+
+.for_psyhologist .form .oferta-text {
+  max-width: 394px; }
+  .for_psyhologist .form .oferta-text input[type=checkbox] {
+    -webkit-transform: translateY(calc(-50% + 2px));
+        -ms-transform: translateY(calc(-50% + 2px));
+            transform: translateY(calc(-50% + 2px)); }
+  .for_psyhologist .form .oferta-text [type=checkbox]:checked + label::before {
+    left: -30px; }
+  .for_psyhologist .form .oferta-text label {
+    width: calc(100% - 33px); }
+    .for_psyhologist .form .oferta-text label a {
+      text-decoration: none;
+      font-size: 13px;
+      line-height: 24px; }
 
 @media (min-width: 600px) {
   .pull-right {
