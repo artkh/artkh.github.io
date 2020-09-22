@@ -2589,7 +2589,7 @@ ul.how-it-works {
         counter-increment: section;
         content: counter(section);
         font-size: var(--l-size);
-        line-height: 30px;
+        line-height: 25px;
         color: #fff;
         text-align: center; }
   .for_psyhologist__box_item:nth-child(3) .for_psyhologist__box_item_info_title {
