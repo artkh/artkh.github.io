@@ -1,0 +1,323 @@
+.why_selection__title {
+  margin-bottom: 80px; }
+
+.why_selection__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 814px;
+  width: 100%;
+  margin: 0 auto; }
+  .why_selection__box_item {
+    max-width: 244px;
+    width: 100%; }
+    .why_selection__box_item .infograf__img {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-bottom: 13px; }
+    .why_selection__box_item_desc {
+      text-align: center;
+      font-size: var(--m-size);
+      line-height: var(--m-line-height); }
+
+.why_selection__inform {
+  position: relative; }
+  .why_selection__inform_vector {
+    position: absolute;
+    top: -15px;
+    left: 40px; }
+  .why_selection__inform_photos {
+    position: absolute;
+    left: 150px;
+    top: 80px; }
+    .why_selection__inform_photos_item {
+      position: absolute;
+      width: 107px;
+      height: 107px;
+      -webkit-filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
+              filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
+      border-radius: 5px;
+      overflow: hidden; }
+      .why_selection__inform_photos_item:nth-child(1) {
+        -webkit-transform: translate(calc(107px + 21px), 0);
+            -ms-transform: translate(calc(107px + 21px), 0);
+                transform: translate(calc(107px + 21px), 0); }
+      .why_selection__inform_photos_item:nth-child(2) {
+        -webkit-transform: translate(0, calc((107px / 2) + 21px));
+            -ms-transform: translate(0, calc((107px / 2) + 21px));
+                transform: translate(0, calc((107px / 2) + 21px)); }
+      .why_selection__inform_photos_item:nth-child(3) {
+        -webkit-transform: translate(calc(107px + 40px), calc(107px + 25px));
+            -ms-transform: translate(calc(107px + 40px), calc(107px + 25px));
+                transform: translate(calc(107px + 40px), calc(107px + 25px)); }
+      .why_selection__inform_photos_item img {
+        width: 100%; }
+  .why_selection__inform_desc {
+    padding-left: 450px;
+    padding-top: 80px;
+    padding-right: 69px; }
+    .why_selection__inform_desc_title {
+      margin-bottom: 20px;
+      text-align: left !important;
+      font-size: 23px;
+      line-height: 28px;
+      font-weight: 400; }
+    .why_selection__inform_desc_text {
+      font-size: var(--l-size);
+      line-height: var(--l-line-height); }
+      .why_selection__inform_desc_text:not(:last-child) {
+        margin-bottom: 15px; }
+
+.search_psichologist {
+  text-align: center; }
+  .search_psichologist__title {
+    margin-bottom: 10px; }
+  .search_psichologist__subtitle {
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto 80px;
+    font-size: 23px;
+    line-height: 28px; }
+  .search_psichologist__stages.hide {
+    position: absolute;
+    z-index: -1; }
+  .search_psichologist__stages {
+    -webkit-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto 40px; }
+    .search_psichologist__stages_item:first-child.anim {
+      -webkit-transform: translateX(calc(50% + 20px));
+          -ms-transform: translateX(calc(50% + 20px));
+              transform: translateX(calc(50% + 20px));
+      opacity: 0; }
+    .search_psichologist__stages_item:last-child.anim {
+      -webkit-transform: translateX(calc(-50% - 20px));
+          -ms-transform: translateX(calc(-50% - 20px));
+              transform: translateX(calc(-50% - 20px));
+      opacity: 0; }
+    .search_psichologist__stages_item.current {
+      z-index: 10;
+      opacity: 1 !important; }
+    .search_psichologist__stages_item {
+      -webkit-transition: 1s ease-out;
+      -o-transition: 1s ease-out;
+      transition: 1s ease-out;
+      position: relative; }
+      .search_psichologist__stages_item:hover {
+        cursor: pointer; }
+      .search_psichologist__stages_item:hover .infograf__img {
+        background-color: var(--orng); }
+      .search_psichologist__stages_item:hover .infograf__img::before {
+        background-image: url(../img/search_psychologist_stage_white.svg); }
+      .search_psichologist__stages_item:not(:last-child) {
+        margin-right: 40px; }
+      .search_psichologist__stages_item .infograf__img {
+        position: relative;
+        padding: 32px;
+        min-width: 164px;
+        max-width: 164px;
+        height: 153px;
+        margin-bottom: 11px;
+        overflow: hidden;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s; }
+        .search_psichologist__stages_item .infograf__img::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url(../img/search_psychologist_stage.svg);
+          background-position: center;
+          background-repeat: no-repeat; }
+      .search_psichologist__stages_item_desc {
+        font-size: 23px;
+        line-height: 28px; }
+  .search_psichologist__stage_info.active {
+    display: block;
+    -webkit-animation: stage-open .5s linear forwards;
+            animation: stage-open .5s linear forwards; }
+  .search_psichologist__stage_info.deactive {
+    -webkit-animation: stage-close .5s linear forwards;
+            animation: stage-close .5s linear forwards; }
+
+@-webkit-keyframes stage-open {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes stage-open {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes stage-close {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes stage-close {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+  .search_psichologist__stage_info {
+    display: none;
+    position: relative;
+    padding: 31px 50px;
+    max-width: 823px;
+    width: 100%;
+    margin: 0 auto 40px;
+    border: 2px solid var(--orng);
+    border-radius: 3px;
+    text-align: left; }
+    .search_psichologist__stage_info_close {
+      content: url(../img/close_black.svg);
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 20px;
+      height: 20px;
+      z-index: 10; }
+      .search_psichologist__stage_info_close:hover {
+        cursor: pointer; }
+    .search_psichologist__stage_info_list_item {
+      position: relative;
+      padding-left: 40px;
+      font-size: var(--m-size);
+      line-height: var(--m-line-height);
+      background-image: url(../img/ok_orange.svg);
+      background-repeat: no-repeat;
+      background-position: top left; }
+      .search_psichologist__stage_info_list_item:not(:last-child) {
+        margin-bottom: 20px; }
+  .search_psichologist .btn {
+    margin: 0; }
+    .search_psichologist .btn:hover {
+      background-color: transparent; }
+
+@media (max-width: 768px) {
+  .why_selection__title {
+    margin-bottom: 50px; }
+  .why_selection__box {
+    display: block;
+    margin-bottom: 40px; }
+    .why_selection__box_item {
+      max-width: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .why_selection__box_item:not(:last-child) {
+        margin-bottom: 30px; }
+      .why_selection__box_item .infograf__img {
+        max-width: 86px;
+        min-width: 86px;
+        height: 80px;
+        margin-bottom: 0;
+        margin-right: 30px; }
+      .why_selection__box_item_desc {
+        text-align: left; }
+  .why_selection__inform {
+    border-top: 1px solid #efefef;
+    padding-top: 40px; }
+    .why_selection__inform_vector {
+      display: none; }
+    .why_selection__inform_photos {
+      display: none; }
+    .why_selection__inform_desc {
+      padding: 0; }
+      .why_selection__inform_desc_title {
+        font-size: var(--l2-size);
+        line-height: var(--l2-line-height); }
+  .search_psichologist__subtitle {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 50px; }
+  .search_psichologist__stages_item:first-child.anim {
+    -webkit-transform: translateX(calc(50% + 10px));
+        -ms-transform: translateX(calc(50% + 10px));
+            transform: translateX(calc(50% + 10px)); }
+  .search_psichologist__stages_item:last-child.anim {
+    -webkit-transform: translateX(calc(-50% - 10px));
+        -ms-transform: translateX(calc(-50% - 10px));
+            transform: translateX(calc(-50% - 10px)); }
+  .search_psichologist__stages_item:not(:last-child) {
+    margin-right: 20px; }
+  .search_psichologist__stages_item .infograf__img {
+    padding: 20px;
+    min-width: 101px;
+    max-width: 101px;
+    height: 94px;
+    margin-bottom: 10px; }
+    .search_psichologist__stages_item .infograf__img::before {
+      background-size: 50%; }
+  .search_psichologist__stages_item_desc {
+    font-size: 19px;
+    line-height: 23px; }
+  .search_psichologist__stage_info {
+    padding: 35px 50px 35px 35px; }
+    .search_psichologist__stage_info_close {
+      top: 18px;
+      right: 18px; }
+  .search_psichologist .btn {
+    min-width: 333px;
+    font-size: var(--m-size);
+    line-height: var(--m-line-height); } }
+
+@media (max-width: 480px) {
+  .why_selection__title {
+    margin-bottom: 30px; }
+  .why_selection__box {
+    margin-bottom: 25px; }
+    .why_selection__box_item {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .why_selection__box_item .infograf__img {
+        margin: 0;
+        margin-bottom: 13px; }
+      .why_selection__box_item_desc {
+        text-align: center;
+        font-size: var(--s-size);
+        line-height: var(--s-line-height); }
+  .why_selection__inform {
+    padding-top: 25px; }
+    .why_selection__inform_desc_title {
+      font-size: 19px;
+      line-height: 23px; }
+    .why_selection__inform_desc_text {
+      font-size: var(--s-size);
+      line-height: var(--s-line-height); }
+  .search_psichologist__subtitle {
+    margin-bottom: 30px;
+    font-size: var(--s2-size);
+    line-height: var(--s2-line-height); }
+  .search_psichologist__stages {
+    margin-bottom: 30px; }
+  .search_psichologist .btn {
+    min-width: 279px;
+    font-size: var(--s-size);
+    line-height: var(--s-line-height); } }

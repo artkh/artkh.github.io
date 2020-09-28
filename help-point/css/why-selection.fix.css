@@ -1,0 +1,23 @@
+header {
+    border-bottom: 1px solid #efefef;
+}
+
+header .container::after {
+    border: none;
+}
+
+footer {
+    border-top: 1px solid #efefef;
+}
+
+.btn-orange:hover {
+    background: var(--light);
+}
+
+footer .btn-orange:hover {
+    background: transparent;
+}
+
+/* .header__user {
+    background: var(--light) !important;
+} */

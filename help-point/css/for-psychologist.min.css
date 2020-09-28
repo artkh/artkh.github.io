@@ -1,0 +1,164 @@
+.for_psyhologist__headtext {
+  max-width: 653px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  text-align: center; }
+  .for_psyhologist__headtext_title {
+    margin-bottom: 10px; }
+  .for_psyhologist__headtext_desc {
+    font-size: var(--l2-size);
+    line-height: var(--l2-line-height);
+    color: #000; }
+    .for_psyhologist__headtext_desc:not(:last-child) {
+      margin-bottom: 10px; }
+
+.for_psyhologist__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 50px; }
+  .for_psyhologist__box_item {
+    width: calc((100%/3) - 20px);
+    padding: 40px 28px;
+    border: 1px solid var(--orng);
+    border-radius: 5px; }
+    .for_psyhologist__box_item_image {
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      padding: 24px;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      border: 1px solid var(--orng);
+      border-radius: 15px; }
+      .for_psyhologist__box_item_image img {
+        width: 100%; }
+    .for_psyhologist__box_item_info_title {
+      margin-bottom: 30px;
+      font-size: 23px;
+      line-height: 28px;
+      text-align: center; }
+    .for_psyhologist__box_item_info_list_item {
+      font-size: var(--l-size);
+      line-height: var(--l-line-height);
+      color: #000;
+      padding-left: 42px;
+      position: relative; }
+      .for_psyhologist__box_item_info_list_item::before {
+        content: url(../img/ok_orange.svg);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 25px;
+        height: 25px; }
+      .for_psyhologist__box_item_info_list_item:not(:last-child) {
+        margin-bottom: 15px; }
+      .for_psyhologist__box_item_info_list_item .note {
+        position: absolute;
+        top: 0;
+        right: 50px;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
+    .for_psyhologist__box_item:last-child .for_psyhologist__box_item_info_list {
+      counter-reset: section; }
+      .for_psyhologist__box_item:last-child .for_psyhologist__box_item_info_list_item::before {
+        background: none;
+        background-color: var(--orng);
+        border-radius: 50%;
+        counter-increment: section;
+        content: counter(section);
+        font-size: var(--l-size);
+        line-height: 25px;
+        color: #fff;
+        text-align: center; }
+  .for_psyhologist__box_item:nth-child(3) .for_psyhologist__box_item_info_title {
+    max-width: 223px;
+    margin: 0 auto 30px; }
+
+.for_psyhologist .form .btn {
+  max-width: 436px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-size: 24px;
+  line-height: 29px; }
+
+.for_psyhologist .form .oferta-text {
+  max-width: 436px; }
+  .for_psyhologist .form .oferta-text input[type=checkbox] {
+    -webkit-transform: translateY(calc(-50% + 2px));
+        -ms-transform: translateY(calc(-50% + 2px));
+            transform: translateY(calc(-50% + 2px));
+    vertical-align: top; }
+  .for_psyhologist .form .oferta-text [type=checkbox]:checked + label::before {
+    left: -30px;
+    top: 11px; }
+  .for_psyhologist .form .oferta-text label {
+    width: calc(100% - 33px); }
+    .for_psyhologist .form .oferta-text label a {
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 24px; }
+
+@media (max-width: 768px) {
+  .for_psyhologist__headtext {
+    margin-bottom: 50px; }
+    .for_psyhologist__headtext_desc {
+      font-size: 22px;
+      line-height: 26px; }
+  .for_psyhologist__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 40px; }
+    .for_psyhologist__box_item {
+      max-width: 373px;
+      width: 100%; }
+      .for_psyhologist__box_item:not(:last-child) {
+        margin-bottom: 30px; }
+      .for_psyhologist__box_item_info_title {
+        margin-bottom: 30px;
+        font-size: 22px;
+        line-height: 26px; }
+      .for_psyhologist__box_item_info_list_item {
+        font-size: var(--m-size);
+        line-height: var(--m-line-height); }
+  .for_psyhologist .form .btn {
+    max-width: 268px;
+    padding-top: 17px;
+    font-size: 18px;
+    line-height: 22px; }
+  .for_psyhologist .form .oferta-text {
+    max-width: 373px; } }
+
+@media (max-width: 480px) {
+  .for_psyhologist__headtext {
+    margin-bottom: 30px; }
+    .for_psyhologist__headtext_desc {
+      font-size: 19px;
+      line-height: 23px; }
+  .for_psyhologist__box {
+    margin-bottom: 30px; }
+    .for_psyhologist__box_item:not(:last-child) {
+      margin-bottom: 20px; }
+    .for_psyhologist__box_item_info_title {
+      font-size: 19px;
+      line-height: 23px; }
+    .for_psyhologist__box_item_info_list_item {
+      font-size: var(--s-size);
+      line-height: var(--s-line-height); }
+  .for_psyhologist .form .btn {
+    max-width: 227px;
+    padding-top: 17px;
+    font-size: var(--s-size);
+    line-height: var(--s-line-height); } }

@@ -154,5 +154,47 @@ document.addEventListener('DOMContentLoaded', function () {
             })
         }
     }
+
+    //этапы подбора психолога
+    let stagesBlock = document.querySelector('.search_psichologist__stages');
+    let stageSearch = document.querySelectorAll('.search_psichologist__stages_item');
+    let stageSearchInfo = document.querySelectorAll('.search_psichologist__stage_info');
+
+    if (stageSearch) {
+        for (let i = 0; i < stageSearch.length; i++) {
+            stageSearch[i].addEventListener('click', function() {
+
+                //анимация сьезжания этапов в один
+                for (let j = 0; j < stageSearch.length; j++) {
+                    stageSearch[j].classList.add('anim');
+                }
+                this.classList.add('current');
+
+                //скрытие этапов и открытие описания выбранного этапа
+                setTimeout(() => {
+                    stagesBlock.classList.add('hide');
+                    stageSearchInfo[i].classList.add('active');
+                }, 1500);
+                
+                //закрытие описания этапа
+                let stageSearchInfoClose = stageSearchInfo[i].querySelector('.search_psichologist__stage_info_close');
+                stageSearchInfoClose.addEventListener('click', function() {
+                    
+                    setTimeout(() => {
+                        
+                        stageSearch[i].classList.remove('current');
+                        stageSearchInfo[i].classList.remove('active', 'deactive');
+                        stagesBlock.classList.remove('hide');
+                        for (let j = 0; j < stageSearch.length; j++) {
+                            stageSearch[j].classList.remove('anim');
+                        }
+                    }, 500);
+                    stageSearchInfo[i].classList.add('deactive');
+
+                });
+
+            });
+        }
+    }
 });
 
