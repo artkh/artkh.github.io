@@ -87,8 +87,8 @@
     line-height: 28px; }
   .search_psichologist__stages.hide {
     position: absolute;
-    z-index: -1;
-    opacity: 0; }
+    left: -9999px;
+    z-index: -1; }
   .search_psichologist__stages {
     -webkit-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
@@ -209,7 +209,8 @@
       line-height: var(--m-line-height);
       background-image: url(../img/ok_orange.svg);
       background-repeat: no-repeat;
-      background-position: top left; }
+      background-position: top left;
+      word-wrap: break-word; }
       .search_psichologist__stage_info_list_item:not(:last-child) {
         margin-bottom: 20px; }
   .search_psichologist .btn {
@@ -319,6 +320,18 @@
     line-height: var(--s2-line-height); }
   .search_psichologist__stages {
     margin-bottom: 30px; }
+  .search_psichologist__stage_info {
+    padding: 25px 23px; }
+    .search_psichologist__stage_info_close {
+      top: 13px;
+      right: 13px;
+      width: 16px;
+      height: 16px; }
+    .search_psichologist__stage_info_list_item {
+      font-size: var(--s-size);
+      line-height: var(--s-line-height); }
+    .search_psichologist__stage_info_list_item:first-child {
+      padding-right: 32px; }
   .search_psichologist .btn {
     min-width: 279px;
     font-size: var(--s-size);
