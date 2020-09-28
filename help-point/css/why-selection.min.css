@@ -183,6 +183,7 @@
   .search_psichologist__stage_info {
     display: none;
     position: relative;
+    z-index: 20;
     padding: 31px 50px;
     max-width: 823px;
     width: 100%;
