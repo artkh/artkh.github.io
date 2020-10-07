@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="../css/main.min.css">
+    <link rel="stylesheet" href="../css/form_page.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="/" aria-label="Психологическая помощь онлайн" class="logo">
+                <img src="https://help-point.net/local/templates/design2020/img/imglogo.png" alt="">
+                Психологическая помощь онлайн
+            </a>
+
+            <nav>
+
+                <ul class="menu__main menu__main-top">
+
+
+                    <li><a href="/about/">О нас</a></li>
+
+
+                    <li><a href="/articles/main/">Статьи</a></li>
+
+
+                    <li><a href="/tests/">Тесты</a></li>
+
+
+                    <li><a href="/faq/">FAQ</a></li>
+
+
+                    <li><a href="/contacts/">Контакты</a></li>
+
+                </ul>
+            </nav>
+            <div class="header__user">
+                <a onclick="ym(52109824, 'reachGoal', 'button_auth');" href="/auth/" class="btn btn-white">Войти</a>
+                <a onclick="ym(52109824, 'reachGoal', 'button_reg');" href="/registration/"
+                    class="btn btn-orange">Регистрация</a>
+            </div>
+            <button class="menu__btn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <div id="bxdynamic_CKtZPX_start" style="display:none"></div>
+
+                <section class="form_page">
+                    <h1>
+                        Бесплатная регистрация
+                    </h1>
+
+                    <p class="text-center small-heading">Введите удобный логин и пароль.
+                        Для логина можно использовать латинские буквы и цифры. Для пароля - не менее 8 символов, включая
+                        одну цифру
+                    </p>
+
+                    <form method="post" action="/registration/" name="regform" enctype="multipart/form-data"
+                        class="form">
+                        <input type="hidden" value="empty" name="REGISTER[LOGIN]">
+                        <input type="hidden" value="1" name="REGISTER[CLIENT_TYPE]">
+
+                        <input type="hidden" name="regform" value="send">
+
+                        <div class="form__item">
+                            <input type="text" name="REGISTER[EMAIL]" value="" id="email" autocomplete="off">
+                            <label for="email">Электронная почта</label>
+                        </div>
+
+                         <div class="form__item">
+                             <input type="login" name="REGISTER[NAME]" value="" id="login" autocomplete="off">
+                             <label for="login">Логин</label>
+                         </div>
+
+                        <div class="form__item">
+                            <input type="password" name="REGISTER[PASSWORD]" value="" id="password" autocomplete="off">
+                            <label for="password">Пароль</label>
+                        </div>
+
+                        <!-- <div class="form__item">
+                            <input type="password" name="REGISTER[CONFIRM_PASSWORD]" value="" id="confirm_password"
+                                autocomplete="off">
+                            <label for="confirm_password">Подтвердите пароль</label>
+                        </div> -->
+
+                        <button type="submit" class="btn btn-orange btn-arrow"
+                            onclick="fbq('track', 'CompleteRegistration');" name="register_submit_button"
+                            value="1">Зарегистрироваться</button>
+
+                        <div class="form_page__oferta">
+                            <a href="#">
+                                Регистрируясь, ты соглашаешься с условиями Лицензионного соглашения и
+                                Положения о защите персональных данных
+                            </a>
+                        </div>
+                    </form>
+                </section>
+
+                <div id="bxdynamic_CKtZPX_end" style="display:none"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="/" aria-label="Психологическая помощь онлайн" class="logo">
+                <img src="https://help-point.net/local/templates/design2020/img/imglogo.png" alt="">
+                Психологическая помощь онлайн
+            </a>
+
+
+
+            <ul class="menu__main menu__main-top">
+
+
+                <li><a href="/about/">О нас</a></li>
+
+
+                <li><a href="/articles/main/">Статьи</a></li>
+
+
+                <li><a href="/tests/">Тесты</a></li>
+
+
+                <li><a href="/faq/">FAQ</a></li>
+
+
+                <li><a href="/contacts/">Контакты</a></li>
+
+            </ul>
+
+            <div class="header__user">
+                <a onclick="ym(52109824, 'reachGoal', 'button_auth');" href="/auth/" class="btn btn-white">Войти</a>
+                <a onclick="ym(52109824, 'reachGoal', 'button_reg');" href="/registration/"
+                    class="btn btn-orange">Регистрация</a>
+            </div>
+
+            <div class="extra-contacts">
+                Наш сервис не предназначен для оказания экстренной психологической помощи. Если вы находитесь в острой
+                кризисной ситуации, пожалуйста, воспользуйтесь одним из этих <a href="/faq#id_686">контактов</a> </div>
+            <div class="footer__links">
+                <div>
+                    <a href="/docs/user_agreement.php">Правила пользования сервисом</a>
+                    <a href="/docs/privacy_policy.php">Политика конфиденциальности</a>
+                    <a href="/for_psyhologist/">Для психологов</a>
+                </div>
+                <div class="social">
+                    <a href="https://www.facebook.com/Helppoint.online/?ref=bookmarks" class="fb"></a>
+                    <a href="https://www.instagram.com/help_point" class="ig"></a>
+                    <a href="https://vk.com/mpc.helppoint" class="vk"></a>
+                    <a href="https://www.youtube.com/channel/UCZM_dtpCX3YVNDXhlKWi1qw" class="youtube"></a>
+                    <a href="https://zen.yandex.ru/id/5e4e2f83e977e25b8eec20ac" class="dzen"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../js/libs.min.js"></script>
+    <script src="../js/forms.js"></script>
+    <script src="../js/youtube.js"></script>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="../css/main.min.css">
+    <!-- <link rel="stylesheet" href="../css/for-psychologist.min.css"> -->
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="/" aria-label="Психологическая помощь онлайн" class="logo">
+                <img src="https://help-point.net/local/templates/design2020/img/imglogo.png" alt="">
+                Психологическая помощь онлайн
+            </a>
+
+            <nav>
+
+                <ul class="menu__main menu__main-top">
+
+
+                    <li><a href="/about/">О нас</a></li>
+
+
+                    <li><a href="/articles/main/">Статьи</a></li>
+
+
+                    <li><a href="/tests/">Тесты</a></li>
+
+
+                    <li><a href="/faq/">FAQ</a></li>
+
+
+                    <li><a href="/contacts/">Контакты</a></li>
+
+                </ul>
+            </nav>
+            <div class="header__user">
+                <a onclick="ym(52109824, 'reachGoal', 'button_auth');" href="/auth/" class="btn btn-white">Войти</a>
+                <a onclick="ym(52109824, 'reachGoal', 'button_reg');" href="/registration/"
+                    class="btn btn-orange">Регистрация</a>
+            </div>
+            <button class="menu__btn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <div id="bxdynamic_0weid0_start" style="display:none"></div>
+                <h1 class="text-center" style="margin-bottom: 41px;text-align: center !important;">
+                    Войти в личный кабинет
+                </h1>
+                <p class="text-center small-heading">В личном кабинете у вас вся информация<br> и функционал для
+                    комфортной работы</p>
+
+                <!--	<h3 class="h3_section h3_white h3_login-->
+                <!-- h3_login_error-->
+                <!--">Вход</h3>-->
+
+                <!--<style>	-->
+                <!--.login_error {-->
+                <!--	width: 320px;-->
+                <!--	text-align:center;-->
+                <!--	margin-bottom:10px;-->
+                <!--}-->
+                <!--.login_error p font {-->
+                <!--	color:#ffa7a7;-->
+                <!--}-->
+                <!--</style>	-->
+                <!--<div class="login_error">	-->
+                <!--	-->
+                <!--</div>-->
+
+                <form name="form_auth" method="post" target="_top" action="/auth/?login=yes" class="form">
+                    <input type="hidden" name="AUTH_FORM" value="Y">
+                    <input type="hidden" name="TYPE" value="AUTH">
+                    <input type="hidden" name="backurl" value="/auth/">
+
+                    <div class="form__item">
+                        <input type="text" name="USER_LOGIN" value="" id="email">
+                        <label for="email">Электронная почта</label>
+                    </div>
+                    <div class="form__item">
+                        <input type="password" name="USER_PASSWORD" maxlength="255" autocomplete="off" id="password">
+                        <label for="password">Пароль</label>
+                    </div>
+                    <button type="submit" class="btn btn-orange btn-arrow">Войти</button>
+                    <p class="oferta-text">Забыли пароль? <a href="/auth/?forgot_password=yes">Восстановить</a></p>
+                </form>
+
+
+
+
+
+
+
+
+                <div id="bxdynamic_0weid0_end" style="display:none"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="/" aria-label="Психологическая помощь онлайн" class="logo">
+                <img src="https://help-point.net/local/templates/design2020/img/imglogo.png" alt="">
+                Психологическая помощь онлайн
+            </a>
+
+
+
+            <ul class="menu__main menu__main-top">
+
+
+                <li><a href="/about/">О нас</a></li>
+
+
+                <li><a href="/articles/main/">Статьи</a></li>
+
+
+                <li><a href="/tests/">Тесты</a></li>
+
+
+                <li><a href="/faq/">FAQ</a></li>
+
+
+                <li><a href="/contacts/">Контакты</a></li>
+
+            </ul>
+
+            <div class="header__user">
+                <a onclick="ym(52109824, 'reachGoal', 'button_auth');" href="/auth/" class="btn btn-white">Войти</a>
+                <a onclick="ym(52109824, 'reachGoal', 'button_reg');" href="/registration/"
+                    class="btn btn-orange">Регистрация</a>
+            </div>
+
+            <div class="extra-contacts">
+                Наш сервис не предназначен для оказания экстренной психологической помощи. Если вы находитесь в острой
+                кризисной ситуации, пожалуйста, воспользуйтесь одним из этих <a href="/faq#id_686">контактов</a> </div>
+            <div class="footer__links">
+                <div>
+                    <a href="/docs/user_agreement.php">Правила пользования сервисом</a>
+                    <a href="/docs/privacy_policy.php">Политика конфиденциальности</a>
+                    <a href="/for_psyhologist/">Для психологов</a>
+                </div>
+                <div class="social">
+                    <a href="https://www.facebook.com/Helppoint.online/?ref=bookmarks" class="fb"></a>
+                    <a href="https://www.instagram.com/help_point" class="ig"></a>
+                    <a href="https://vk.com/mpc.helppoint" class="vk"></a>
+                    <a href="https://www.youtube.com/channel/UCZM_dtpCX3YVNDXhlKWi1qw" class="youtube"></a>
+                    <a href="https://zen.yandex.ru/id/5e4e2f83e977e25b8eec20ac" class="dzen"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../js/libs.min.js"></script>
+    <script src="../js/forms.js"></script>
+    <script src="../js/youtube.js"></script>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

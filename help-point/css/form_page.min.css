@@ -1,0 +1,47 @@
+.form_page h1 {
+  margin-bottom: 10px; }
+
+.form_page .small-heading {
+  font-size: 19px;
+  line-height: 23px;
+  margin-bottom: 20px; }
+
+.form_page .form {
+  font-size: 16px; }
+
+.form_page .btn-orange {
+  margin-bottom: 10px;
+  min-width: 318px;
+  width: auto; }
+
+.form_page__oferta {
+  font-size: 12px;
+  line-height: 14px;
+  max-width: 308px;
+  margin: 0 auto; }
+  .form_page__oferta a {
+    color: var(--dark); }
+
+.form_page .form [type="submit"] {
+  margin-top: 30px; }
+
+@media (min-width: 600px) {
+  .form_page .small-heading {
+    font-size: 22px;
+    line-height: 26px; }
+  .form_page .form {
+    font-size: 18px; }
+  .form_page__oferta {
+    font-size: 13px;
+    line-height: 16px; } }
+
+@media (min-width: 1200px) {
+  .form_page .small-heading {
+    font-size: 23px;
+    line-height: 28px;
+    margin-bottom: 30px; }
+  .form_page .form [type="submit"] {
+    margin-top: 40px; }
+  .form_page__oferta {
+    font-size: 14px;
+    line-height: 17px; } }

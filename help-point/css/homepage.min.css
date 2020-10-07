@@ -1,0 +1,48 @@
+.first-screen .container {
+  padding: 50px 20px; }
+  .first-screen .container .first-screen__info {
+    margin-bottom: 30px; }
+    .first-screen .container .first-screen__info .h1 {
+      margin-bottom: 10px; }
+    .first-screen .container .first-screen__info .intro {
+      padding: 0;
+      margin-bottom: 20px;
+      width: auto; }
+    .first-screen .container .first-screen__info .btn {
+      margin-top: 0;
+      margin-bottom: 10px; }
+    .first-screen .container .first-screen__info .price {
+      margin: 0; }
+  .first-screen .container .first-screen__image img {
+    margin: 0; }
+
+@media (min-width: 600px) {
+  .first-screen .container {
+    padding: 90px 20px; }
+    .first-screen .container .first-screen__info {
+      margin-bottom: 40px; }
+      .first-screen .container .first-screen__info .intro {
+        margin-bottom: 30px; } }
+
+@media (min-width: 1200px) {
+  .first-screen .container {
+    padding: 130px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .first-screen .container .first-screen__info {
+      width: calc(50% - 35px);
+      margin-bottom: 0; }
+      .first-screen .container .first-screen__info .intro {
+        margin-bottom: 40px; }
+    .first-screen .container .first-screen__image {
+      width: calc(50% - 35px); }
+      .first-screen .container .first-screen__image img {
+        position: static;
+        width: auto; } }
