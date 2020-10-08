@@ -772,7 +772,7 @@ header .container {
   text-decoration: none;
   min-width: 122px;
   text-align: center;
-  padding: 8px;
+  padding: 12px 21px;
   color: var(--dark);
   border-radius: 5px;
   outline: none; }
@@ -1042,17 +1042,16 @@ footer .logo > img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
 
 .social > a {
-  width: 31px;
-  height: 31px;
+  width: 30px;
+  height: 30px;
   background-image: url(/local/templates/design2020/img/iconfacebook.svg);
   background-repeat: no-repeat;
   background-position: 50%;
-  margin: 8.5px 10.5px; }
+  background-size: contain; }
 
 .social > a.ig {
   background-image: url(/local/templates/design2020/img/iconinstagram.svg); }
@@ -1755,13 +1754,9 @@ ul.how-it-works {
   .footer__links > div:first-child a:not(:last-child) {
     margin-bottom: 20px; }
   .social {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; }
-  .social > a {
-    margin: 7px 0 0 -6px; }
-  .social > a + a {
-    margin-left: 20px; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
   .pdr185 {
     padding-right: 185px; }
   .pdr40 {
@@ -1923,7 +1918,7 @@ ul.how-it-works {
             justify-content: center; }
   .footer__links > div:first-child {
     margin-left: auto;
-    margin-right: 36px; }
+    margin-right: 43px; }
   .extra-contacts {
     width: 367px;
     margin: 30px 0 0; }
