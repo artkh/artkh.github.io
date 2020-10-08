@@ -2366,12 +2366,7 @@ ul.how-it-works {
             transform: rotate(90deg) scale(1.26); } }
 
 .social > a {
-  width: 31px;
-  height: 31px;
-  background-image: url(https://help-point.net/local/templates/design2020/img/iconfacebook.svg);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  margin: 8.5px 10.5px; }
+  background-image: url(https://help-point.net/local/templates/design2020/img/iconfacebook.svg); }
 
 .social > a.ig {
   background-image: url(https://help-point.net/local/templates/design2020/img/iconinstagram.svg); }
@@ -2386,9 +2381,7 @@ ul.how-it-works {
   background-image: url(https://help-point.net/local/templates/design2020/img/icondzen.svg); }
 
 .btn-arrow:after {
-  background-image: url(https://help-point.net/local/templates/design2020/img/arrow-white.svg);
-  background-repeat: no-repeat;
-  background-position: 52% 50%; }
+  background-image: url(https://help-point.net/local/templates/design2020/img/arrow-white.svg); }
 
 .btn-arrow:hover:after {
   background-image: url(https://help-point.net/local/templates/design2020/img/arrow-orng.svg); }
