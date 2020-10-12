@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Регистрация</title>
+    <title>Восстановление пароля</title>
     <link rel="stylesheet" href="../css/main.min.css">
     <link rel="stylesheet" href="../css/form_page.min.css">
 </head>
@@ -54,60 +54,27 @@
     <main>
         <section class="form_page">
             <div class="container">
-                <div id="bxdynamic_CKtZPX_start" style="display:none"></div>
+                <!--'start_frame_cache_z0UWqa'-->
+                <h1>Восстановление пароля
+                </h1>
 
-                    <h1>
-                        Бесплатная регистрация
-                    </h1>
+                <p class="text-center small-heading">
+                    Введите электронную почту указанную при регистрации
+                </p>
 
-                    <p class="text-center small-heading">Введите удобный логин и пароль.
-                        Для логина можно использовать латинские буквы и цифры. Для пароля - не менее 8 символов, включая
-                        одну цифру
-                    </p>
+                <form method="post" target="_top" action="/auth/?forgot_password=yes" class="form">
+                    <input type="hidden" name="backurl" value="/auth/">
+                    <input type="hidden" name="AUTH_FORM" value="Y">
+                    <input type="hidden" name="TYPE" value="SEND_PWD">
+                    <div class="form__item">
+                        <input type="text" name="USER_EMAIL" id="email">
+                        <label for="email">Электронная почта</label>
+                    </div>
+                    <button type="submit" class="btn btn-orange btn-arrow">Восстановить</button>
+                </form>
 
-                    <form method="post" action="/registration/" name="regform" enctype="multipart/form-data"
-                        class="form">
-                        <input type="hidden" value="empty" name="REGISTER[LOGIN]">
-                        <input type="hidden" value="1" name="REGISTER[CLIENT_TYPE]">
 
-                        <input type="hidden" name="regform" value="send">
-
-                        <div class="form__item">
-                            <input type="text" name="REGISTER[EMAIL]" value="" id="email" autocomplete="off">
-                            <label for="email">Электронная почта</label>
-                        </div>
-
-                         <div class="form__item">
-                             <input type="login" name="REGISTER[NAME]" value="" id="login" autocomplete="off">
-                             <label for="login">Логин</label>
-                         </div>
-
-                        <div class="form__item">
-                            <input type="password" name="REGISTER[PASSWORD]" value="" id="password" autocomplete="off">
-                            <label for="password">Пароль</label>
-                        </div>
-
-                        <!-- <div class="form__item">
-                            <input type="password" name="REGISTER[CONFIRM_PASSWORD]" value="" id="confirm_password"
-                                autocomplete="off">
-                            <label for="confirm_password">Подтвердите пароль</label>
-                        </div> -->
-
-                        <button type="submit" class="btn btn-orange btn-arrow"
-                            onclick="fbq('track', 'CompleteRegistration');" name="register_submit_button"
-                            value="1">Зарегистрироваться</button>
-
-                        <p class="oferta-text">
-                            <input type="checkbox" name="REGISTER[OFFER]" id="rules" value="on"><label for="rules"><a
-                                    href="#">принимаете правила пользования сервисом</a></label><br>
-                            <input type="checkbox" name="REGISTER[CONSENT]" id="policy" value="on"><label
-                                for="policy"><a href="#">согласны на обработку персональных данных</a></label><br>
-                            <input type="checkbox" name="REGISTER[MAILING]" id="mailing" value="on"><label
-                                for="mailing"><a href="#">на получение информационных и сервисных сообщений</a></label>
-                        </p>
-                    </form>
-
-                <div id="bxdynamic_CKtZPX_end" style="display:none"></div>
+                <!--'end_frame_cache_z0UWqa'-->
             </div>
         </section>
     </main>
