@@ -1375,7 +1375,11 @@ ul.how-it-works {
   display: none; }
 
 .specs__wrapper ol.ordered li {
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
+
+.specs__wrapper .col ol.ordered li:not(:last-child) {
+  margin-bottom: 10px; }
 
 .will-help {
   display: -webkit-box;
@@ -2018,8 +2022,6 @@ ul.how-it-works {
     padding: 17px 21px; }
   .specs__wrapper .col ol.ordered li {
     margin-bottom: 0; }
-  .specs__wrapper .col ol.ordered li:not(:last-child) {
-    margin-bottom: 10px; }
   .specs__wrapper .our-spec {
     display: inline-block; }
   .specs__wrapper .consultation {
