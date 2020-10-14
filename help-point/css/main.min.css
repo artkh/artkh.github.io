@@ -1458,21 +1458,25 @@ ul.how-it-works {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  margin-top: 30px; }
 
 .tariff {
   border: 1px solid var(--orng);
   border-radius: 10px;
-  padding: 20px 25px 30px;
-  margin-bottom: 17px;
+  padding: 20px;
+  margin-bottom: 15px;
   position: relative; }
 
 .tariff h3 {
   text-align: left;
   margin-top: 15px;
   margin-bottom: 12px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--dark-light); }
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--dark-light);
+  word-break: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word; }
 
 .tariff h3 > small {
   line-height: 1em;
@@ -1484,22 +1488,33 @@ ul.how-it-works {
 
 .tariff p {
   font-size: var(--s-size);
-  line-height: var(--s-line-height); }
+  line-height: var(--s-line-height);
+  margin: 0; }
 
 .tariff .price {
   font-size: var(--s2-size);
   line-height: var(--s2-line-height); }
 
+.tariff .ok-list {
+  width: 100%; }
+
+.tariff .ok-list li {
+  margin: 0; }
+
+.tariff .ok-list li:not(:last-child) {
+  margin-bottom: 15px; }
+
 .tariff .btn {
-  margin-top: 15px; }
+  margin-top: 15px;
+  min-width: 100%; }
 
 .tooltip {
   width: 23px;
   height: 23px;
   background: url(/local/templates/design2020/img/iconvnimanie.svg) no-repeat 0 0;
   position: absolute;
-  top: 17px;
-  right: 15px;
+  top: 15px;
+  right: 12px;
   cursor: help; }
 
 .tooltip__text {
@@ -2006,13 +2021,6 @@ ul.how-it-works {
     margin-top: 66px;
     margin-bottom: 35px; } }
 
-@media (max-width: 350px) {
-  .tariff {
-    padding: 20px 15px 30px; }
-  .tariff .btn {
-    width: 250px;
-    padding: 15px 51px 15px 0px; } }
-
 @media (min-width: 600px) {
   .first-screen {
     width: 500px;
@@ -2080,23 +2088,26 @@ ul.how-it-works {
     font-size: var(--m-size);
     line-height: var(--m-line-height);
     margin-bottom: 10px; }
+  .tariffs {
+    margin-top: 50px; }
   .tariff {
-    width: 533px;
-    margin: 0 auto 40px;
-    padding: 34px 90px 50px 57px; }
+    width: 443px;
+    margin: 0 auto 20px;
+    padding: 35px; }
   .tariff .price {
-    font-size: 25px;
-    line-height: 30px;
-    margin-top: 7px;
-    margin-bottom: -3px; }
+    font-size: 22px;
+    line-height: 26px; }
   .tariff h3 {
     margin-top: 19px;
-    margin-bottom: 19px; }
+    margin-bottom: 14px; }
+  .tariff h3 > small {
+    margin-bottom: 9px; }
   .tariff p {
     font-size: var(--m-size);
     line-height: var(--m-line-height); }
   .tariff .btn {
-    margin-top: 46px; }
+    margin-top: 25px;
+    min-width: 279px; }
   .tooltip__text {
     width: 88vw;
     max-width: 475px;
@@ -2106,8 +2117,8 @@ ul.how-it-works {
     width: 32px;
     height: 32px;
     background-size: 32px;
-    top: 18px;
-    right: 13px; }
+    top: 20px;
+    right: 20px; }
   .tooltip:hover,
   .tooltip:focus {
     background-size: 32px; }
@@ -2430,36 +2441,39 @@ ul.how-it-works {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 77px; }
+    margin-top: 80px; }
   .tariff {
-    margin: 0 0 20px;
-    height: 490px;
-    padding: 39px 54px; }
+    width: 533px;
+    margin: 0 0 30px;
+    padding-bottom: 125px; }
   .tariff:nth-child(even) {
-    margin-left: 20px; }
+    margin-left: 30px; }
   .tariff:nth-child(3),
   .tariff:nth-child(4) {
-    height: 568px;
-    padding: 44px 53px; }
+    margin-bottom: 0; }
+  .tariff .price {
+    font-size: 23px;
+    line-height: 28px; }
   .tariff h3 {
     text-align: left !important;
-    max-width: 370px;
-    padding-bottom: 13px;
-    margin-bottom: 14px; }
+    padding-bottom: 6px;
+    margin-top: 17px;
+    margin-bottom: 15px; }
   .tariff h3 > small {
     font-size: 25px; }
   .tariff:nth-child(4) h3 {
     max-width: 100%; }
   .tariff .btn {
-    width: 328px;
-    padding: 20px 76px 20px 16px;
+    min-width: 328px;
     position: absolute;
-    bottom: 45px;
-    left: 55px;
-    border-radius: 8px; }
+    bottom: 35px;
+    left: 35px; }
+  .tariff p,
+  .tariff .ok-list {
+    width: calc(100% - 55px); }
   .tooltip {
-    top: 29px;
-    right: 16px; }
+    top: 27px;
+    right: 21px; }
   .faq__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
