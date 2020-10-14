@@ -829,7 +829,7 @@ header .container {
   margin-top: 5px;
   margin-bottom: 10px;
   display: inline-block;
-  background: url(/local/templates/design2020/img/arrow-orng.svg) no-repeat 100% 0; }
+  background: url(/local/templates/design2020/img/arrow-orng.svg) no-repeat 100% 50%; }
 
 .header__user {
   display: none;
@@ -1284,27 +1284,34 @@ input[type=checkbox].error {
   color: var(--dark); }
 
 .first-screen .container {
-  text-align: center;
-  padding: 50px 0 25px; }
+  text-align: center; }
+
+.first-screen__info {
+  margin-bottom: 30px; }
 
 .first-screen .h1 {
-  margin: 0; }
+  margin: 0;
+  margin-bottom: 10px; }
 
 .first-screen .intro {
   line-height: 25px;
-  padding: 5px 50px 40px;
-  margin: 0; }
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  width: auto; }
 
 .first-screen .price {
   font-size: var(--s-size);
-  line-height: 21px; }
+  line-height: 21px;
+  margin: 0; }
 
 .first-screen img {
   width: 100%;
-  margin: 15px auto 8px; }
+  margin: 0; }
 
 .first-screen .btn {
-  margin: 0; }
+  margin: 0;
+  margin-bottom: 10px; }
 
 .how-it-works__wrapper,
 .specs__wrapper {
@@ -1405,16 +1412,35 @@ ul.how-it-works {
   padding: 0;
   word-break: break-word; }
 
+.reviews {
+  padding-left: 0;
+  padding-right: 0; }
+
+.reviews h2 {
+  margin-bottom: 36px;
+  padding: 0 20px; }
+
+.reviews .link-arrow {
+  margin: 0;
+  margin-bottom: 15px;
+  padding-left: 20px; }
+
 .reviews__slider article {
   border: 1px solid var(--orng);
-  border-radius: 4%;
-  padding: 20px 15px 20px; }
+  border-radius: 10px;
+  padding: 17px;
+  min-height: 210px;
+  margin: 0 5px; }
 
 .reviews__slider article h3 {
   font-size: var(--s-size);
   line-height: var(--s-line-height);
   text-align: left;
   margin-bottom: 5px; }
+
+.reviews__slider article a {
+  text-decoration: none;
+  margin-left: 5px; }
 
 .reviews__slider__arrows {
   display: -webkit-box;
@@ -1425,8 +1451,7 @@ ul.how-it-works {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  margin: 25px 0 0px; }
+          align-items: center; }
 
 .tariffs {
   display: -webkit-box;
@@ -1993,12 +2018,13 @@ ul.how-it-works {
     width: 500px;
     margin: 0 auto; }
   .first-screen .container {
-    text-align: center;
-    padding: 68px 0 40px; }
+    text-align: center; }
+  .first-screen__info {
+    margin-bottom: 40px; }
   .first-screen .intro {
     line-height: 29px;
-    padding: 12px 0 33px;
-    margin: 0; }
+    margin: 0;
+    margin-bottom: 30px; }
   .first-screen .price {
     font-size: 18px;
     line-height: 24px;
@@ -2039,13 +2065,16 @@ ul.how-it-works {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  ul.reviews__slider {
-    width: 100vw;
-    margin-left: calc((710px - 100vw)/2); }
+  .reviews {
+    padding-left: 0;
+    padding-right: 0; }
+  .reviews h2 {
+    margin-bottom: 54px; }
+  .reviews .link-arrow {
+    margin-right: 65px; }
   .reviews__slider article {
-    border-radius: 10px;
-    padding: 41px 52px;
-    margin: 0px 5px;
+    padding: 30px;
+    margin: 0px 7.5px;
     min-height: 250px; }
   .reviews__slider article h3 {
     font-size: var(--m-size);
@@ -2138,7 +2167,18 @@ ul.how-it-works {
   .first-screen .container {
     position: relative;
     text-align: left;
-    padding: 110px 16px 212px; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .first-screen__info {
+    width: calc(50% - 35px);
+    margin-bottom: 0; }
   .first-screen .h1 {
     font-size: 45px;
     line-height: 54px;
@@ -2146,18 +2186,16 @@ ul.how-it-works {
   .first-screen .intro {
     font-size: var(--l2-size);
     line-height: 33px;
-    width: 570px; }
+    width: 570px;
+    margin-bottom: 40px; }
   .first-screen .btn {
     margin-top: 32px; }
   .first-screen .price {
     font-size: 20px;
     line-height: 27px;
     margin: 15px 0 0; }
-  .first-screen img {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 600px; }
+  .first-screen__image {
+    width: calc(50% - 35px); }
   .how-it-works__wrapper,
   .specs__wrapper {
     display: -webkit-box;
@@ -2358,6 +2396,13 @@ ul.how-it-works {
   .join-us .btn-arrow {
     min-width: 100%;
     margin: 0; }
+  .reviews {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .reviews h2 {
+    margin-bottom: 84px; }
+  .reviews .link-arrow {
+    margin-right: 0; }
   ul.reviews__slider {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2371,14 +2416,16 @@ ul.how-it-works {
     margin: 0 auto;
     margin-bottom: -29px; }
   ul.reviews__slider li {
-    width: calc(50% - 10px);
-    margin-bottom: 20px; }
+    width: calc(50% - 15px);
+    margin-bottom: 30px; }
   ul.reviews__slider li:nth-child(even) {
-    margin-left: 20px; }
+    margin-left: 30px; }
   .reviews__slider article h3 {
     text-align: left !important; }
   .reviews__slider article {
-    margin: 0; }
+    margin: 0;
+    padding: 35px;
+    min-height: 235px; }
   .tariffs {
     -webkit-box-pack: center;
         -ms-flex-pack: center;

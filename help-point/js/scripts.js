@@ -32,8 +32,8 @@ $(document).ready(function () {
     if (winWidth < 1025) {
         if ($(document).find('.reviews__slider').length) {
             $('.reviews__slider').slick({
-                arrows: true,
-                dots: true,
+                arrows: false,
+                dots: false,
                 appendArrows: '.reviews__slider__arrows',
                 appendDots: '.dots',
                 centerMode: true,
@@ -41,10 +41,10 @@ $(document).ready(function () {
                 responsive: [{
                     breakpoint: 600,
                     settings: {
-                        centerMode: false,
-                        arrows: true,
-                        dots: true,
-                        fade: true,
+                        centerMode: true,
+                        centerPadding: '15px',
+                        arrows: false,
+                        dots: false,
                         adaptiveHeight: true,
                         slidesToShow: 1
                     }
