@@ -138,6 +138,8 @@ document.addEventListener('DOMContentLoaded', function () {
             })
         }
     }
+    //переключение часто задаваемых вопросов ---КОНЕЦ
+
 
     //таб с детальной информацией
     let faqMore = document.querySelectorAll('.faq_page__more');
@@ -152,8 +154,48 @@ document.addEventListener('DOMContentLoaded', function () {
                     this.parentNode.parentNode.querySelector('.faq_page__slidercontent_item_description').classList.remove('active');
                 }
             })
+            
         }
     }
+    //таб с детальной информацией ---КОНЕЦ
+
+    //переключение стрелками вопросов на главной странице
+    let faqArrowLeft = document.querySelector('.faq_page__box_arrows_left');
+    let faqArrowRight = document.querySelector('.faq_page__box_arrows_right');
+    let faqSliderContent = document.querySelectorAll('.faq_page__slidercontent');
+
+    if (faqArrowLeft || faqArrowRight) {
+
+        let counter = 0;
+        faqArrowLeft.addEventListener('click', function() {
+
+            for (let i = 0; i < faqSliderContent.length; i++) {
+                if (faqSliderContent[i].classList.contains('active') && i > 0) {
+                    faqSliderContent[i].classList.remove('active');
+                    counter = i;
+                    --counter;
+                }
+            }
+
+            faqSliderContent[counter].classList.add('active');
+
+        });
+
+        faqArrowRight.addEventListener('click', function () {
+
+            for (let i = 0; i < faqSliderContent.length; i++) {
+                if (faqSliderContent[i].classList.contains('active') && i < --faqSliderContent.length) {
+                    faqSliderContent[i].classList.remove('active');
+                    counter = i;
+                    ++counter;
+                }
+            }
+
+            faqSliderContent[counter].classList.add('active');
+        });
+
+    }
+    //переключение стрелками вопросов на главной странице ---КОНЕЦ
 
     //этапы подбора психолога
     let stagesBlock = document.querySelector('.search_psichologist__stages');
@@ -196,5 +238,8 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
+
+    //этапы подбора психолога ---КОНЕЦ
+
 });
 
