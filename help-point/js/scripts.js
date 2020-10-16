@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     --counter;
                 }
             }
-
+            
             faqSliderContent[counter].classList.add('active');
 
         });

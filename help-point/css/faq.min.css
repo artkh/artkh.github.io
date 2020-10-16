@@ -43,7 +43,21 @@
     .faq_page__box .faq_page__slidertabs_item.active .faq_page__slidertabs_item_title {
       color: var(--orng); }
   .faq_page__box .faq_page__slidercontent.active {
-    display: block; }
+    display: block;
+    -webkit-animation: faq-open .5s ease-in-out;
+            animation: faq-open .5s ease-in-out; }
+
+@-webkit-keyframes faq-open {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes faq-open {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
   .faq_page__box .faq_page__slidercontent {
     display: none;
     text-align: left; }
@@ -100,10 +114,25 @@
       .faq_page__box .faq_page__slidercontent_item_description {
         display: none;
         margin-top: 10px;
+        overflow: hidden;
         font-size: var(--m-size);
         line-height: var(--m-line-height); }
       .faq_page__box .faq_page__slidercontent_item_description.active {
-        display: block; }
+        display: block;
+        -webkit-animation: faq-desc-open .5s ease-in-out forwards;
+                animation: faq-desc-open .5s ease-in-out forwards; }
+
+@-webkit-keyframes faq-desc-open {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes faq-desc-open {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 @media (max-width: 768px) {
   .faq_page__title {
