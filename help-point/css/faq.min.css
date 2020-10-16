@@ -44,8 +44,8 @@
       color: var(--orng); }
   .faq_page__box .faq_page__slidercontent.active {
     display: block;
-    -webkit-animation: faq-open .5s ease-in-out;
-            animation: faq-open .5s ease-in-out; }
+    -webkit-animation: faq-open .5s ease-in-out forwards;
+            animation: faq-open .5s ease-in-out forwards; }
 
 @-webkit-keyframes faq-open {
   0% {
