@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'Heuristica';
+  src: local("Heuristica Regular"), local("Heuristica-Regular"), url("../fonts/heuristicaregular.woff2") format("woff2"), url("../fonts/heuristicaregular.woff") format("woff"), url("../fonts/heuristicaregular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Heuristica';
+  src: local("Heuristica Italic"), local("Heuristica-Italic"), url("../fonts/heuristicaitalic.woff2") format("woff2"), url("../fonts/heuristicaitalic.woff") format("woff"), url("../fonts/heuristicaitalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Heuristica';
+  src: local("Heuristica Bold"), local("Heuristica-Bold"), url("../fonts/heuristicabold.woff2") format("woff2"), url("../fonts/heuristicabold.woff") format("woff"), url("../fonts/heuristicabold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Heuristica';
+  src: local("Heuristica Bold Italic"), local("Heuristica-BoldItalic"), url("../fonts/heuristicabolditalic.woff2") format("woff2"), url("../fonts/heuristicabolditalic.woff") format("woff"), url("../fonts/heuristicabolditalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic; }
+
+.social > a {
+  background-image: url(https://help-point.net/local/templates/design2020/img/iconfacebook.svg); }
+
+.social > a.ig {
+  background-image: url(https://help-point.net/local/templates/design2020/img/iconinstagram.svg); }
+
+.social > a.vk {
+  background-image: url(https://help-point.net/local/templates/design2020/img/iconvkontakte.svg); }
+
+.social > a.youtube {
+  background-image: url(https://help-point.net/local/templates/design2020/img/iconyoutube.svg); }
+
+.social > a.dzen {
+  background-image: url(https://help-point.net/local/templates/design2020/img/icondzen.svg); }
+
+.btn-arrow:after {
+  background-image: url(https://help-point.net/local/templates/design2020/img/arrow-white.svg); }
+
+.btn-arrow:hover:after {
+  background-image: url(https://help-point.net/local/templates/design2020/img/arrow-orng.svg); }
+
+.link-arrow {
+  background-image: url(https://help-point.net/local/templates/design2020/img/arrow-orng.svg); }
+
+.ok-list li:before {
+  background-image: url(https://help-point.net/local/templates/design2020/img/icongalochka.svg); }
+
+.tooltip {
+  background-image: url(https://help-point.net/local/templates/design2020/img/iconvnimanie.svg); }
+
+.tooltip:hover,
+.tooltip:focus {
+  background-image: url(https://help-point.net/local/templates/design2020/img/iconvnimanie-orng.svg); }
+
+.faq__img:before {
+  background-image: url(https://help-point.net/local/templates/design2020/img/bg-faq-pic.svg); }
