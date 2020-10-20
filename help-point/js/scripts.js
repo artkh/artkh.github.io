@@ -102,6 +102,12 @@ $(document).ready(function () {
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    window.addEventListener('resize', function() {
+        if(document.documentElement.clientWidth > 1200) {
+            document.body.classList.remove('open');
+        }
+    });
+
     //переключение часто задаваемых вопросов
     let sliderTab = document.querySelectorAll('.faq_page__slidertabs_item');
 

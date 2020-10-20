@@ -38,8 +38,6 @@
             justify-content: flex-start; }
   .header__user .btn {
     display: inline-block; }
-  .open header .header__user {
-    margin-top: 0; }
   .menu__btn {
     top: 50%;
     right: 24.5px;
@@ -209,6 +207,10 @@
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
+  .header__user .btn {
+    padding: 15px 24px;
+    font-size: var(--s-size);
+    line-height: var(--s-line-height); }
   .menu__main.menu__main-top li {
     border: none;
     padding: 0;

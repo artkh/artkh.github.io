@@ -223,7 +223,7 @@ header .container {
   display: none; }
 
 .logo {
-  padding: 20px 0 5px;
+  padding: 20px 0 10px;
   max-width: 150px;
   display: block;
   font-size: 15px;
@@ -349,13 +349,18 @@ header .container {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  width: 100%;
   background: var(--light); }
 
 .open header .header__user {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  margin-top: 5px; }
+  display: flex; }
+
+.header__user .btn {
+  padding: 10px 25px;
+  font-size: 14px;
+  line-height: 17px; }
 
 nav {
   display: none;
@@ -369,12 +374,14 @@ nav {
   z-index: 9; }
 
 .open nav {
-  display: block;
-  padding-top: 5px; }
+  display: block; }
 
 .menu__main.menu__main-top li {
-  padding: 11px 0 13px;
+  padding: 25px 0 10px;
   border-bottom: 1px solid #C4C4C4; }
+
+.open .menu__main.menu__main-top li:first-child {
+  padding-top: 30px; }
 
 .menu__main.menu__main-top li > a {
   color: var(--dark);
@@ -387,8 +394,11 @@ nav {
   padding: 0; }
 
 .open .menu__main.menu__main-top li {
-  margin: 0;
-  padding: 25px 0 10px; }
+  margin: 0; }
+
+.open main,
+.open footer {
+  display: none; }
 
 .infograf__img {
   border: 1px solid var(--orng);
