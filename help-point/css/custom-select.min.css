@@ -13,7 +13,7 @@
 .select-selected::after {
   position: absolute;
   content: "";
-  top: 15px;
+  bottom: 15px;
   right: 10px;
   width: 9px;
   height: 9px;
@@ -28,15 +28,15 @@
   -webkit-transform: rotate(-135deg);
       -ms-transform: rotate(-135deg);
           transform: rotate(-135deg);
-  top: 19px; }
+  bottom: 13px; }
 
 /* style the items (options), including the selected item: */
 .select-items div,
 .select-selected {
-  color: #C0C0C0;
+  color: rgba(117, 117, 117, 0.5);
   text-align: left;
-  padding: 7px 0;
-  margin: 10px auto 0;
+  padding: 5px 0;
+  margin: 15px auto 0;
   border: 1px solid transparent;
   border-bottom: 1px #e0e0e0 solid;
   cursor: pointer; }
