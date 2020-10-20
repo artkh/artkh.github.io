@@ -276,7 +276,7 @@ ul.how-it-works {
   background-image: url(/local/templates/design2020/img/bg-faq-pic.svg);
   background-repeat: space;
   background-size: 7.5px;
-  left: calc(50% + 16px);
+  left: calc(50% - 12.5px + 3.5px + 24px);
   bottom: -24px;
   z-index: 1; }
 
