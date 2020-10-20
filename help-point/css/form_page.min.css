@@ -16,6 +16,11 @@
   min-width: 279px;
   width: auto; }
 
+.form_page .btn:not(.btn-arrow) {
+  padding: 15px 21px;
+  font-size: 16px;
+  line-height: 19px; }
+
 .form_page__oferta {
   font-size: 12px;
   line-height: 14px;
@@ -33,6 +38,11 @@
     line-height: 26px; }
   .form_page .form {
     font-size: 18px; }
+  .form_page textarea {
+    padding: 15px 30px;
+    height: 97px; }
+  .form_page .btn:not(.btn-arrow) {
+    margin-top: 30px; }
   .form_page__oferta {
     font-size: 13px;
     line-height: 16px; } }
@@ -45,6 +55,10 @@
   .form_page .btn-arrow {
     margin-top: 40px;
     min-width: 318px; }
+  .form_page .btn:not(.btn-arrow) {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 14px 21px; }
   .form_page__oferta {
     font-size: 14px;
     line-height: 17px; } }
