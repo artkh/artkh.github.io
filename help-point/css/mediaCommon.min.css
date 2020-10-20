@@ -17,6 +17,14 @@
     line-height: var(--m-line-height);
     margin-top: 20px;
     margin-bottom: 15px; }
+  .btn-arrow {
+    padding: 19px 80px 19px 19px;
+    font-size: var(--m-size);
+    line-height: var(--m-line-height); }
+  .btn-arrow:after {
+    width: 60px;
+    height: 102%;
+    background-size: 18px; }
   .container {
     max-width: 768px;
     padding: 90px 20px; }
@@ -226,13 +234,10 @@
     padding-bottom: 12px;
     min-width: 142px; }
   .btn-arrow {
-    font-size: 18px;
-    line-height: 22px;
     min-width: 337px;
-    padding: 19px 80px 19px 19px; }
-  .btn-arrow:after {
-    width: 60px;
-    height: 102%; }
+    padding: 19px 80px 19px 19px;
+    font-size: var(--m-size);
+    line-height: var(--m-line-height); }
   .pdr185 {
     padding: 0; }
   .infograf__img {

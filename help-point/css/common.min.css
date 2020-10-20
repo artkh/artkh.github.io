@@ -305,8 +305,8 @@ header .container {
   color: var(--dark); }
 
 .btn-arrow {
-  font-size: 14.9px;
-  line-height: 18px;
+  font-size: var(--s-size);
+  line-height: var(--s-line-height);
   min-width: 279px;
   margin: 5px 0 0;
   padding: 14px 55px 14px 5px;
@@ -326,7 +326,8 @@ header .container {
   border-bottom-right-radius: 5px;
   background-image: url(/local/templates/design2020/img/arrow-white.svg);
   background-repeat: no-repeat;
-  background-position: 52% 50%; }
+  background-position: 50% 50%;
+  background-size: 14px; }
 
 .btn-arrow:hover:after {
   background-image: url(/local/templates/design2020/img/arrow-orng.svg);
