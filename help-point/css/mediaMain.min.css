@@ -120,7 +120,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .faq__content .faq_page__slidercontent_item {
+  .faq__content .faq_page__box .faq_page__slidercontent_item {
     padding-right: 0; }
   .faq__content .faq_page__box .faq_page__slidercontent_item_title .faq_page__more {
     right: 0; }
@@ -513,7 +513,7 @@
   .faq__content .faq_page__box {
     min-width: 100%; }
   .faq__content .faq_page__slidercontent {
-    width: 85%; }
+    width: 80%; }
   .faq__content .faq_page__box .faq_page__box_arrows_left,
   .faq__content .faq_page__box .faq_page__box_arrows_right {
     width: 45px;
