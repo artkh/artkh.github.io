@@ -8,7 +8,7 @@
   .h1 {
     font-size: 32px;
     line-height: 38px;
-    margin-bottom: 41px; }
+    margin-bottom: 50px; }
   p {
     font-size: var(--m2-size);
     line-height: var(--m2-line-height); }
@@ -167,7 +167,8 @@
   .h1 {
     font-size: 35px;
     line-height: 42px;
-    text-align: center !important; }
+    text-align: center !important;
+    margin-bottom: 80px; }
   p {
     font-size: var(--l2-size);
     line-height: var(--l2-line-height); }
