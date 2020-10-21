@@ -7,7 +7,6 @@
   margin-bottom: 20px; }
 
 .form_page .form {
-  font-size: 16px;
   padding: 0; }
 
 .form_page .btn-arrow {
@@ -36,21 +35,9 @@
   .form_page .small-heading {
     font-size: 22px;
     line-height: 26px; }
-  .form_page .form {
-    font-size: 18px; }
   .form_page textarea {
     padding: 15px 30px;
     height: 97px; }
-  .form_page textarea::-webkit-input-placeholder {
-    font-size: 18px; }
-  .form_page textarea::-moz-placeholder {
-    font-size: 18px; }
-  .form_page textarea:-ms-input-placeholder {
-    font-size: 18px; }
-  .form_page textarea::-ms-input-placeholder {
-    font-size: 18px; }
-  .form_page textarea::placeholder {
-    font-size: 18px; }
   .form_page .btn:not(.btn-arrow) {
     margin-top: 30px; }
   .form_page__oferta {

@@ -7,7 +7,7 @@ h1 + .small-heading {
   max-width: 509px;
   margin: 0 auto;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   padding: 2px 0; }
 
 .form__item {
@@ -22,6 +22,9 @@ h1 + .small-heading {
   position: absolute;
   color: rgba(117, 117, 117, 0.5);
   z-index: 0;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
   -webkit-transition: color .3s ease, bottom .3s ease, font-size .3s ease, -webkit-transform .3s ease;
   transition: color .3s ease, bottom .3s ease, font-size .3s ease, -webkit-transform .3s ease;
   -o-transition: color .3s ease, bottom .3s ease, font-size .3s ease, transform .3s ease;
@@ -57,41 +60,36 @@ h1 + .small-heading {
   background-color: var(--light);
   border-color: var(--orng);
   resize: none;
-  outline: none;
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  -moz-appearance: none; }
 
 textarea::-webkit-input-placeholder {
   color: rgba(72, 72, 72, 0.5);
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 16px; }
 
 textarea::-moz-placeholder {
   color: rgba(72, 72, 72, 0.5);
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 16px; }
 
 textarea:-ms-input-placeholder {
   color: rgba(72, 72, 72, 0.5);
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 16px; }
 
 textarea::-ms-input-placeholder {
   color: rgba(72, 72, 72, 0.5);
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 16px; }
 
 textarea::placeholder {
   color: rgba(72, 72, 72, 0.5);
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 16px; }
 
 .form input:focus + label,
 .form .filled label {
   font-size: 12px;
   bottom: 100%;
-  -webkit-transform: translateY(50%);
-      -ms-transform: translateY(50%);
-          transform: translateY(50%); }
+  -webkit-transform: translateY(7px);
+      -ms-transform: translateY(7px);
+          transform: translateY(7px); }
 
 .form .filled label {
   color: var(--dark); }
@@ -176,3 +174,17 @@ input[type=checkbox].error {
 
 [type=checkbox] + label > a {
   color: var(--dark); }
+
+@media (min-width: 600px) {
+  .form {
+    font-size: 18px; }
+  textarea::-webkit-input-placeholder {
+    font-size: 18px; }
+  textarea::-moz-placeholder {
+    font-size: 18px; }
+  textarea:-ms-input-placeholder {
+    font-size: 18px; }
+  textarea::-ms-input-placeholder {
+    font-size: 18px; }
+  textarea::placeholder {
+    font-size: 18px; } }
