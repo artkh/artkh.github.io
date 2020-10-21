@@ -4,16 +4,12 @@
     margin: 0 auto; }
   .first-screen .container {
     text-align: center; }
-  .first-screen__info {
-    margin-bottom: 40px; }
   .first-screen .intro {
-    line-height: 29px;
     margin: 0;
     margin-bottom: 30px; }
   .first-screen .price {
     font-size: 18px;
-    line-height: 24px;
-    margin: 7px 0 -2px; }
+    line-height: 24px; }
   .how-it-works__wrapper,
   .specs__wrapper {
     margin-top: 50px; }
@@ -207,16 +203,12 @@
     line-height: 54px;
     text-align: left !important; }
   .first-screen .intro {
-    font-size: var(--l2-size);
-    line-height: 33px;
-    width: 570px;
+    font-size: 23px;
+    line-height: 28px;
     margin-bottom: 40px; }
-  .first-screen .btn {
-    margin-top: 32px; }
   .first-screen .price {
     font-size: 20px;
-    line-height: 27px;
-    margin: 15px 0 0; }
+    line-height: 27px; }
   .first-screen__image {
     width: calc(50% - 35px); }
   .how-it-works__wrapper,

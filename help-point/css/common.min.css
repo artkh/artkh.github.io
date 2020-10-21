@@ -309,7 +309,7 @@ header .container {
   line-height: var(--s-line-height);
   min-width: 279px;
   margin: 5px 0 0;
-  padding: 14px 55px 14px 5px;
+  padding: 15px 55px 15px 25px;
   display: inline-block;
   position: relative; }
 
