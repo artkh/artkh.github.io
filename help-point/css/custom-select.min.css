@@ -28,7 +28,7 @@
   -webkit-transform: rotate(-135deg);
       -ms-transform: rotate(-135deg);
           transform: rotate(-135deg);
-  bottom: 13px; }
+  bottom: 12px; }
 
 /* style the items (options), including the selected item: */
 .select-items div,
@@ -37,7 +37,7 @@
   text-align: left;
   padding: 5px 0;
   margin: 15px auto 0;
-  border: 1px solid transparent;
+  border: none;
   border-bottom: 1px #e0e0e0 solid;
   cursor: pointer; }
 
