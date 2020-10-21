@@ -26,11 +26,9 @@ h1 + .small-heading {
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
           transform: translateY(0);
-  -webkit-transition: color .3s ease, bottom .3s ease, font-size .3s ease, -webkit-transform .3s ease;
-  transition: color .3s ease, bottom .3s ease, font-size .3s ease, -webkit-transform .3s ease;
-  -o-transition: color .3s ease, bottom .3s ease, font-size .3s ease, transform .3s ease;
-  transition: color .3s ease, bottom .3s ease, font-size .3s ease, transform .3s ease;
-  transition: color .3s ease, bottom .3s ease, font-size .3s ease, transform .3s ease, -webkit-transform .3s ease; }
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease; }
 
 .form input {
   display: block;
@@ -89,11 +87,10 @@ textarea::placeholder {
 .form input:focus + label,
 .form .filled label {
   font-size: 12px;
-  line-height: 12px;
   bottom: 100%;
-  -webkit-transform: translateY(2px);
-      -ms-transform: translateY(2px);
-          transform: translateY(2px); }
+  -webkit-transform: translateY(9px);
+      -ms-transform: translateY(9px);
+          transform: translateY(9px); }
 
 .form .filled label {
   color: var(--dark); }

@@ -1,0 +1,58 @@
+.about_us__subtitle {
+  margin: 0;
+  margin-bottom: 20px; }
+
+.about_us ol.ordered li {
+  padding-right: 30px; }
+
+.about_us h2 {
+  margin-bottom: 20px;
+  font-size: var(--s2-size);
+  line-height: var(--s2-line-height);
+  font-weight: normal;
+  text-align: left; }
+
+.features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start; }
+
+.feature:not(:last-child) {
+  margin-bottom: 27px; }
+
+.feature .infograf__img {
+  margin-right: 30px;
+  margin-top: 6px;
+  margin-left: 0; }
+
+.feature .num {
+  font-size: 32px;
+  line-height: 38px;
+  display: inline-block;
+  padding: 0 2px;
+  border-bottom: 1px solid;
+  margin-bottom: 10px; }
+
+.feature .text {
+  font-size: var(--s-size);
+  line-height: var(--s-line-height); }
+
+.feature .link-arrow {
+  padding-left: 0;
+  padding-right: 35px;
+  margin: 0;
+  margin-top: 18px; }

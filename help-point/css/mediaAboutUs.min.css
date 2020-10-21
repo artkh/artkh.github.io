@@ -1,0 +1,30 @@
+@media (min-width: 600px) {
+  .features {
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .feature:nth-child(odd) {
+    width: 50%; }
+  .feature {
+    width: 45%;
+    margin-bottom: 51px; }
+  .feature .link-arrow {
+    font-size: var(--s-size);
+    line-height: var(--s-line-height); } }
+
+@media (min-width: 1200px) {
+  .feature .infograf__img {
+    margin-right: 22px; }
+  .feature .num {
+    font-size: 35px;
+    line-height: 42px;
+    margin-top: -8px;
+    margin-bottom: 12px; }
+  .feature .text {
+    font-size: var(--l-size);
+    line-height: var(--l-line-height); }
+  .feature .link-arrow {
+    font-size: var(--l-size);
+    line-height: var(--l-line-height); } }

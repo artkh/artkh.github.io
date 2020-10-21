@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Контакты</title>
+    <title>О нас</title>
     <link rel="stylesheet" href="../css/libs.min.css">
     <link rel="stylesheet" href="../css/common.min.css">
     <link rel="stylesheet" href="../css/mediaCommon.min.css">
@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="../css/mediaMain.min.css">
     <link rel="stylesheet" href="../css/fix.min.css">
     <link rel="stylesheet" href="../css/fix-local.min.css">
-    <link rel="stylesheet" href="../css/form_page.min.css">
-    <link rel="stylesheet" href="../css/custom-select.min.css">
+    <link rel="stylesheet" href="../css/aboutUs.min.css">
+    <link rel="stylesheet" href="../css/mediaAboutUs.min.css">
 </head>
 <body>
 
@@ -60,45 +60,83 @@
     </header>
 
     <main>
-        <section class="form_page">
+        <section class="about_us">
             <div class="container">
-                <div id="bxdynamic_Uu0i2y_start" style="display:none"></div>
-                <h1 class="text-center">
-                    Контакты сервиса<br>психологической онлайн помощи
+                <h1 class="text-left">
+                    Психологическая онлайн-консультация
                 </h1>
-                <p class="text-center small-heading">Заполните форму обратной связи и мы свяжемся с вами в кратчайшие
-                    сроки.</p>
-                <form class="form" id="contact-form" method="post" action="/contacts/" name="regform">
-                    <input type="hidden" name="sessid" id="sessid" value="e4906334c0d0bfacd546ac88803b0497">
-                    <div class="form__item">
-                        <input type="email" name="user_email" id="email" value="" required="">
-                        <label for="email">Электронная почта</label>
-                    </div>
-                    <div class="form__item">
-                        <input type="text" name="user_name" id="name" value="" required="">
-                        <label for="name">Имя</label>
-                    </div>
-                    <div class="form__item">
-                        <div class="custom-select">
-                            <select name="REASON">
-                                <option value="">Причина не указана</option>
-                                <option value="Вопрос">Вопрос</option>
-                                <option value="Жалоба">Жалоба</option>
-                                <option value="Совет">Совет</option>
-                                <option value="Совет">Отзыв</option>
-                            </select>
+                <p class="about_us__subtitle">Психологическая помощь не должна быть дорогой — <br>психологическая помощь
+                    должна быть доступной</p>
+                <ol class="ordered">
+                    <li>
+                        Мы создали онлайн-сервис Helppoint для того, чтобы любой, кому нужна поддержка психолога мог
+                        быстро и легко получить ее, не тратя драгоценное время и ресурсы на поиск, проверку специалиста,
+                        на длительное ожидание сессии.
+                    </li>
+                    <li>
+                        Мы автоматизировали подбор психолога, мы сами тщательно проверяем тех, кто будет с вами
+                        работать, сведя риск того, что вы попадете к недобросовестному специалисту к минимуму.
+                    </li>
+                    <li>
+                        Мы создали уникальную платформу, где от подбора психолога до первой консультации с ним может
+                        пройти всего несколько минут.
+                    </li>
+                </ol>
+                <div class="by-chosing-us__wrapper">
+                    <h2>Выбирая нас вы получаете:</h2>
+                </div>
+                <div class="features">
+                    <div class="feature">
+                        <div class="infograf__img">
+                            <img src="https://help-point.net/local/templates/design2020/img/operator1.svg" alt="">
+                        </div>
+                        <div class="desc">
+                            <div class="num">01</div>
+                            <div class="text">
+                                Все виды онлайн-консультирования: видеочат, переписку, живые онлайн-сессии
+                            </div>
+                            <a href="/registration/" class="link-arrow">Начать консультацию</a>
                         </div>
                     </div>
-                    <div class="form__item">
-                        <textarea name="MESSAGE" id="message" placeholder="Введите сообщение" required=""></textarea>
+                    <div class="feature">
+                        <div class="infograf__img">
+                            <img src="https://help-point.net/local/templates/design2020/img/newspaper.svg" alt="">
+                        </div>
+                        <div class="desc">
+                            <div class="num">02</div>
+                            <div class="text">
+                                Психологические тесты, помогающие разобраться в себе
+                            </div>
+                            <a href="/tests/" class="link-arrow">Пройти тест</a>
+
+                        </div>
                     </div>
-
-                    <input type="hidden" name="PARAMS_HASH" value="1b7e81dda341edc4d75cfe8868e10179">
-                    <button type="submit" class="btn btn-orange" style="cursor:pointer" value="Отправить"
-                        name="submit">Отправить</button>
-                </form>
-
-                <div id="bxdynamic_Uu0i2y_end" style="display:none"></div>
+                    <div class="feature">
+                        <div class="infograf__img">
+                            <img src="https://help-point.net/local/templates/design2020/img/list.svg" alt="">
+                        </div>
+                        <div class="desc">
+                            <div class="num">03</div>
+                            <div class="text">
+                                Психологические статьи на актуальные темы
+                            </div>
+                            <a href="/articles/" class="link-arrow">Прочитать</a>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="infograf__img">
+                            <img src="https://help-point.net/local/templates/design2020/img/thinking2.svg" alt="">
+                        </div>
+                        <div class="desc">
+                            <div class="num">04</div>
+                            <div class="text">
+                                Клиентскую поддержку. Мы всегда рядом и готовы помочь в решении любых технических
+                                вопросов
+                            </div>
+                            <a href="/contacts/" class="link-arrow">Написать менеджеру</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
