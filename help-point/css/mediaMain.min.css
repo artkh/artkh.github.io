@@ -328,8 +328,7 @@
   .specs__slider .btn-arrow {
     margin-left: 94px;
     margin-top: 39px;
-    width: 275px;
-    margin-bottom: 19px; }
+    width: 275px; }
   .will-help {
     margin-top: 80px;
     margin-bottom: -20px; }
@@ -409,6 +408,7 @@
     margin: 0;
     margin-bottom: 20px; }
   .join-us .btn-arrow {
+    padding: 20px 80px 19px 19px;
     min-width: 100%;
     margin: 0; }
   .reviews {
@@ -468,7 +468,7 @@
   .tariff:nth-child(4) h3 {
     max-width: 100%; }
   .tariff .btn {
-    min-width: 328px;
+    min-width: 356px;
     position: absolute;
     bottom: 35px;
     left: 35px; }
