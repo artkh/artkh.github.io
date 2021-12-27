@@ -54,4 +54,24 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	//work nav END
 
+	//floating menu
+	let wrapMenu = document.body.querySelector('.wrapper__motion_menu');
+	let navMenu = wrapMenu.querySelector('.motion_menu');
+
+	window.addEventListener('scroll', function() {
+		let bottomPointWrapMenu = wrapMenu.getBoundingClientRect().bottom;
+		let heightWrapMenu = wrapMenu.getBoundingClientRect().height;
+		
+		if(bottomPointWrapMenu <= 0) {
+			wrapMenu.classList.add('scroll');
+			navMenu.classList.add('animate__slideInDown');
+			wrapMenu.style.height = heightWrapMenu + 'px';
+		} else {
+			wrapMenu.classList.remove('scroll');
+			navMenu.classList.remove('animate__slideInDown');
+			wrapMenu.style.height = '';
+		}
+	})
+	//floating menu END
+
 });
