@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+
+        <a href="#" class="logo">
+          <img src="img/Logo.svg" alt="car-rent">
+        </a>
+
+        <div class="search">
+          <input type="search" class="search_string" placeholder="Search something here" name="" id="">
+          <div class="filter__list">
+            <div class="filter__list_item">
+              <input type="checkbox" value="list1" name="" id="list1">
+              <label for="list1">list1</label>
+            </div>
+            <div class="filter__list_item">
+              <input type="checkbox" value="list2" name="" id="list2">
+              <label for="list2">list2</label>
+            </div>
+            <div class="filter__list_item">
+              <input type="checkbox" value="list3" name="" id="list3">
+              <label for="list3">list3</label>
+            </div>
+          </div>
+          <div class="filter"></div>
+        </div>
+
+        <nav class="nav">
+          <a href="#" id="favorits"></a>
+          <a href="#" id="notifications" class="active"></a>
+          <a href="#" id="settings"></a>
+          <a href="#" id="profile"></a>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container topslider">
+      <div class="topslider__wrapper">
+
+        <div class="topslider__wrapper_item">
+          <img src="img/topslider-1.png" alt="">
+          <div class="title">
+            The Best Platform for Car Rental
+          </div>
+          <div class="desc">
+            Ease of doing a car rental safely and reliably. Of course at a low price.
+          </div>
+          <a href="#" class="primary_button primary_button__l">
+            Rental Car
+          </a>
+        </div>
+
+        <div class="topslider__wrapper_item">
+          <img src="img/topslider-2.png" alt="">
+          <div class="title">
+            Easy way to rent a car at a low price
+          </div>
+          <div class="desc">
+            Providing cheap car rental services and safe and comfortable facilities.
+          </div>
+          <a href="#" class="primary_button primary_button__l">
+            Rental Car
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="search_cars container">
+      <div class="search_cars__wrapper">
+
+        <div class="search_cars__wrapper_item">
+          <div class="inner">
+
+            <div class="action_choise">
+              <input type="radio" id="pickUp" name="pickUp" checked>
+              <label for="pickUp">Pick - Up</label>
+            </div>
+
+            <div class="selection_conditions">
+
+              <div class="selection_conditions__item">
+                <label for="pickUpLocation">Locations</label>
+                <select name="" id="pickUpLocation">
+                  <option value="Moscow">Moscow</option>
+                  <option value="Spb">Spb</option>
+                  <option value="Sochi">Sochi</option>
+                </select>
+              </div>
+
+              <div class="selection_conditions__item">
+                <label for="pickUpDate">Date</label>
+                <input type="date" id="pickUpDate">
+              </div>
+
+              <div class="selection_conditions__item">
+                <label for="pickUpTime">Time</label>
+                <input type="time" id="pickUpTime">
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="swap primary_button icon icon__l"></div>
+
+        <div class="search_cars__wrapper_item">
+          <div class="inner">
+
+            <div class="action_choise">
+              <input type="radio" id="dropOff" name="dropOff" checked>
+              <label for="dropOff">Drop - Off</label>
+            </div>
+
+            <div class="selection_conditions">
+
+              <div class="selection_conditions__item">
+                <label for="dropOffLocation">Locations</label>
+                <select name="" id="dropOffLocation">
+                  <option value="Moscow">Moscow</option>
+                  <option value="Spb">Spb</option>
+                  <option value="Sochi">Sochi</option>
+                </select>
+              </div>
+
+              <div class="selection_conditions__item">
+                <label for="dropOffDate">Date</label>
+                <input type="date" id="dropOffDate" min="2022-09-09" max="2022-12-31">
+              </div>
+
+              <div class="selection_conditions__item">
+                <label for="dropOffTime">Time</label>
+                <input type="time" id="dropOffTime">
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="most_popular container">
+      <div class="most_popular__wrapper">
+
+        <div class="most_popular__wrapper_top">
+          <h2>Popular Car</h2>
+          <a href="#" class="link">View All</a>
+        </div>
+
+        <div class="category__items">
+          <div class="item">
+            <div class="inner">
+
+              <div class="top_info">
+                <a href="#" class="top_info__name">Koenigsegg</a>
+                <div class="top_info__class">Sport</div>
+                <div class="top_info__favorites in_favorites"></div>
+              </div>
+
+              <a href="#" class="image">
+                <img src="img/category1.png" alt="">
+              </a>
+
+              <div class="spec">
+                <div class="spec__item fuel">90l</div>
+                <div class="spec__item gearbox__manual">Manual</div>
+                <div class="spec__item people">2 People</div>
+              </div>
+
+              <div class="rent">
+                <div class="rent__price">
+                  $99.00/ <span class="rent__price_time">day</span>
+                </div>
+
+                <a href="#" class="rent__link primary_button primary_button__l">Rent Now</a>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="inner">
+
+              <div class="top_info">
+                <a href="#" class="top_info__name">Nissan GT - R</a>
+                <div class="top_info__class">Sport</div>
+                <div class="top_info__favorites"></div>
+              </div>
+
+              <a href="#" class="image">
+                <img src="img/category3.png" alt="">
+              </a>
+
+              <div class="spec">
+                <div class="spec__item fuel">80l</div>
+                <div class="spec__item gearbox__manual">Manual</div>
+                <div class="spec__item people">2 People</div>
+              </div>
+
+              <div class="rent">
+                <div class="rent__price">
+                  $80.00/ <span class="rent__price_time">day</span>
+                  <div class="rent__price_discount">$100.00</div>
+                </div>
+
+                <a href="#" class="rent__link primary_button primary_button__l">Rent Now</a>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="inner">
+
+              <div class="top_info">
+                <a href="#" class="top_info__name">Rolls - Royce</a>
+                <div class="top_info__class">Sedan</div>
+                <div class="top_info__favorites in_favorites"></div>
+              </div>
+
+              <a href="#" class="image">
+                <img src="img/category2.png" alt="">
+              </a>
+
+              <div class="spec">
+                <div class="spec__item fuel">70l</div>
+                <div class="spec__item gearbox__manual">Manual</div>
+                <div class="spec__item people">4 People</div>
+              </div>
+
+              <div class="rent">
+                <div class="rent__price">
+                  $96.00/ <span class="rent__price_time">day</span>
+                </div>
+
+                <a href="#" class="rent__link primary_button primary_button__l">Rent Now</a>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="inner">
+
+              <div class="top_info">
+                <a href="#" class="top_info__name">Nissan GT - R</a>
+                <div class="top_info__class">Sport</div>
+                <div class="top_info__favorites"></div>
+              </div>
+
+              <a href="#" class="image">
+                <img src="img/category3.png" alt="">
+              </a>
+
+              <div class="spec">
+                <div class="spec__item fuel">80l</div>
+                <div class="spec__item gearbox__manual">Manual</div>
+                <div class="spec__item people">2 People</div>
+              </div>
+
+              <div class="rent">
+                <div class="rent__price">
+                  $80.00/ <span class="rent__price_time">day</span>
+                  <div class="rent__price_discount">$100.00</div>
+                </div>
+
+                <a href="#" class="rent__link primary_button primary_button__l">Rent Now</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+    </section>
+  </main>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
