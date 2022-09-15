@@ -4,12 +4,6 @@ $(function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  //   let topSlider = document.querySelector('.topslider__wrapper');
-
-  //   topSlider.addEventListener('dblclick', function() {
-  //     console.log(event);
-  //     topSlider.style.transform = 'translateX(calc(-100% - 24px))';
-  //   })
 
   // поисковая строка в хидере
   let searchFilter = document.querySelector('.search').querySelector('.filter');
@@ -20,6 +14,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     searchFilter.addEventListener('click', function () {
       searchFilterList.classList.toggle('active');
+
+      if(searchFilterList.classList.contains('active')) {
+        document.addEventListener('scroll', function() {
+          searchFilterList.classList.remove('active');
+        });
+      }
     })
 
     searchString.addEventListener('focus', function() {

@@ -903,7 +903,6 @@ input[type=radio] {
   -o-transition: 0.1s;
   transition: 0.1s;
 }
-
 input[type=radio]:checked {
   border: none;
   background-size: 16px;
@@ -921,6 +920,21 @@ input[type=radio]:checked::after {
           transform: translate(-50%, -50%);
   border-radius: 50%;
   background-color: #3563e9;
+}
+
+input[type=checkbox] {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #90A3BF;
+  border-radius: 2px;
+  background-color: transparent;
+}
+input[type=checkbox]:checked {
+  background-color: #90A3BF;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3e%3cpath fill='%23fff' d='M3.57994 7.58001C3.37994 7.58001 3.18994 7.50001 3.04994 7.36001L0.219941 4.53001C-0.0700586 4.24001 -0.0700586 3.76001 0.219941 3.47001C0.509941 3.18001 0.989941 3.18001 1.27994 3.47001L3.57994 5.77001L8.71994 0.630006C9.00994 0.340006 9.48994 0.340006 9.77994 0.630006C10.0699 0.920006 10.0699 1.40001 9.77994 1.69001L4.10994 7.36001C3.96994 7.50001 3.77994 7.58001 3.57994 7.58001Z'/%3e%3c/svg%3e");
+  background-size: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 select {
@@ -949,6 +963,8 @@ a {
   font-weight: 600;
   line-height: 160%;
   color: #fff;
+  text-align: center;
+  white-space: nowrap;
   background-color: #3563e9;
   border-radius: 4px;
   text-decoration: none;
@@ -1018,6 +1034,7 @@ body {
 
 header.header {
   background-color: #fff;
+  border-bottom: 1px solid rgba(195, 212, 233, 0.4);
 }
 header.header .container {
   padding: 0;
@@ -1035,7 +1052,6 @@ header.header .container .header__wrapper {
   height: 124px;
   width: 100%;
   padding: 0 32px;
-  border: 1px solid rgba(195, 212, 233, 0.4);
 }
 header.header .container .header__wrapper .logo {
   margin-left: 28px;
@@ -1125,9 +1141,8 @@ header.header .container .header__wrapper .search .filter {
 }
 header.header .container .header__wrapper .search .filter__list {
   position: absolute;
-  max-width: 100px;
-  width: 100%;
-  right: 20px;
+  max-width: 180px;
+  right: 0;
   top: 110%;
   z-index: -10;
   opacity: 0;
@@ -1384,10 +1399,12 @@ main .search_cars__wrapper .swap {
   background-size: 24px;
   border-radius: 10px;
 }
-main .most_popular__wrapper {
+main .most_popular__wrapper,
+main .recommended_cars__wrapper {
   margin-top: 46px;
 }
-main .most_popular__wrapper_top {
+main .most_popular__wrapper_top,
+main .recommended_cars__wrapper_top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1396,14 +1413,16 @@ main .most_popular__wrapper_top {
           justify-content: space-between;
   margin-bottom: 30px;
 }
-main .most_popular__wrapper_top h2 {
+main .most_popular__wrapper_top h2,
+main .recommended_cars__wrapper_top h2 {
   margin: 0;
   padding: 0 20px;
   font-size: 16px;
   font-weight: 600;
   color: #90a3bf;
 }
-main .most_popular__wrapper_top a {
+main .most_popular__wrapper_top a,
+main .recommended_cars__wrapper_top a {
   padding: 0 20px;
 }
 main .category__items {
@@ -1415,11 +1434,17 @@ main .category__items {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-right: -32px;
 }
 main .category__items .item {
-  width: calc(25% - 24px);
+  -ms-flex-preferred-size: 304px;
+      flex-basis: 304px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   padding: 24px;
   margin-bottom: 32px;
+  margin-right: 32px;
+  overflow: hidden;
   background-color: #fff;
   border-radius: 10px;
 }
@@ -1475,9 +1500,9 @@ main .category__items .item .inner .image::after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 68px;
+  height: 90px;
   left: 0;
-  bottom: 27px;
+  bottom: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#FFFFFF));
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
@@ -1492,14 +1517,12 @@ main .category__items .item .inner .spec {
   margin-bottom: 24px;
 }
 main .category__items .item .inner .spec__item {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   padding-left: 30px;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
   color: #90a3bf;
+  white-space: nowrap;
   background-size: 24px;
   background-position: center left;
   background-repeat: no-repeat;
@@ -1515,7 +1538,7 @@ main .category__items .item .inner .rent {
       -ms-flex-align: center;
           align-items: center;
 }
-main .category__items .item .inner .rent__price {
+main .category__items .item .inner .rent__price_finalcost {
   font-size: 20px;
   font-weight: 700;
 }
@@ -1528,13 +1551,20 @@ main .category__items .item .inner .rent__link {
   padding: 10px 20px;
   min-width: 117px;
 }
+main .recommended_cars__wrapper {
+  margin-top: 10px;
+}
 
 @media (max-width: 1023px) {
-  .primary_button {
+  .primary_button,
+.primary_button.primary_button__l {
     font-size: 12px;
   }
   .container {
     padding: 0 24px;
+  }
+  header.header {
+    border: none;
   }
   header.header .container {
     padding: 0 24px;
@@ -1544,7 +1574,6 @@ main .category__items .item .inner .rent__link {
         flex-wrap: wrap;
     height: auto;
     padding: 32px 0 32px;
-    border: none;
   }
   header.header .container .header__wrapper .logo {
     width: 108px;
@@ -1585,35 +1614,43 @@ header.header .container .header__wrapper nav.nav #notifications,
 header.header .container .header__wrapper nav.nav #settings {
     display: none;
   }
+  main .topslider.container {
+    padding: 0;
+  }
   main .topslider {
-    padding-top: 0;
+    position: relative;
+  }
+  main .topslider::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 116px;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: #fff;
   }
   main .topslider__wrapper {
-    position: relative;
+    padding: 0 24px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
-    overflow: scroll;
+    overflow-x: scroll;
   }
-  main .topslider__wrapper::before {
-    content: "";
-    position: absolute;
-    background-color: #fff;
-    width: calc(200% + 48px);
-    height: 116px;
-    top: 0;
-    left: -24px;
-    z-index: 0;
+  main .topslider__wrapper::-webkit-scrollbar {
+    width: 0;
   }
   main .topslider__wrapper_item {
     min-width: 100%;
     min-height: 232px;
     padding: 16px;
-    margin-right: 24px;
     z-index: 100;
+  }
+  main .topslider__wrapper_item:not(:last-child) {
+    margin-right: 24px;
   }
   main .topslider__wrapper_item .title,
 main .topslider__wrapper_item .desc,
@@ -1653,5 +1690,156 @@ main .topslider__wrapper_item .primary_button {
   }
   main .search_cars__wrapper .swap {
     top: calc(50% - 16px);
+  }
+  main .category__items {
+    margin-right: 0;
+  }
+  main .category__items .item {
+    padding: 16px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+  main .category__items .item .inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .category__items .item .inner .top_info {
+    width: 100%;
+  }
+  main .category__items .item .inner .top_info__name {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  main .category__items .item .inner .top_info__class {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5em;
+  }
+  main .category__items .item .inner .image {
+    max-width: 420px;
+    width: 69%;
+    height: 132px;
+    margin: 0;
+  }
+  main .category__items .item .inner .image img {
+    width: 80%;
+  }
+  main .category__items .item .inner .image::after {
+    height: 66px;
+  }
+  main .category__items .item .inner .spec {
+    margin-bottom: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .category__items .item .inner .spec__item {
+    padding-left: 18px;
+    font-size: 12px;
+    line-height: 1.5em;
+    background-size: 14px;
+  }
+  main .category__items .item .inner .spec__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  main .category__items .item .inner .rent {
+    width: 100%;
+  }
+  main .category__items .item .inner .rent__price_finalcost {
+    font-size: 16px;
+  }
+  main .category__items .item .inner .rent__price_time, main .category__items .item .inner .rent__price_discount {
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+  main .category__items .item .inner .rent__link {
+    padding: 10px 16px;
+    margin-left: 16px;
+    min-width: auto;
+  }
+  main .most_popular.container {
+    padding: 0;
+  }
+  main .most_popular__wrapper,
+main .recommended_cars__wrapper {
+    margin-top: 0;
+  }
+  main .most_popular__wrapper_top,
+main .recommended_cars__wrapper_top {
+    margin-bottom: 20px;
+    padding: 0 24px;
+  }
+  main .most_popular__wrapper_top h2,
+main .most_popular__wrapper_top a,
+main .recommended_cars__wrapper_top h2,
+main .recommended_cars__wrapper_top a {
+    padding: 0;
+  }
+  main .most_popular__wrapper_top h2,
+main .recommended_cars__wrapper_top h2 {
+    font-size: 14px;
+  }
+  main .most_popular__wrapper_top a,
+main .recommended_cars__wrapper_top a {
+    font-size: 12px;
+  }
+  main .most_popular .category__items {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding-left: 24px;
+    padding-right: 24px;
+    overflow: scroll;
+  }
+  main .most_popular .category__items::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  main .most_popular .category__items .item:not(:last-child) {
+    margin-right: 20px;
+  }
+  main .most_popular .category__items .item {
+    -ms-flex-preferred-size: 240px;
+        flex-basis: 240px;
+  }
+  main .most_popular .category__items .item .inner {
+    display: block;
+  }
+  main .most_popular .category__items .item .inner .image {
+    width: 100%;
+  }
+  main .most_popular .category__items .item .inner .image img {
+    width: calc(100% - 28px);
+  }
+  main .most_popular .category__items .item .inner .spec {
+    margin-bottom: 28px;
+    padding: 0 2px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .most_popular .category__items .item .inner .spec__item {
+    margin-bottom: 0;
+  }
+  main .recommended_cars__wrapper {
+    margin-top: 10px;
+  }
+  main .recommended_cars__wrapper_top {
+    padding: 0;
   }
 }
