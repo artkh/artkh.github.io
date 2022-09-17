@@ -937,6 +937,11 @@ input[type=checkbox]:checked {
   background-repeat: no-repeat;
 }
 
+input[type=date]::-webkit-calendar-picker-indicator,
+input[type=time]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
 select {
   font-size: 12px;
   font-weight: 500;
@@ -1333,6 +1338,7 @@ main .search_cars__wrapper_item {
   padding: 24px 48px;
   border-radius: 10px;
   background-color: #fff;
+  overflow: hidden;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -1380,7 +1386,7 @@ main .search_cars__wrapper_item .inner .selection_conditions__item label {
 }
 main .search_cars__wrapper_item .inner .selection_conditions__item select,
 main .search_cars__wrapper_item .inner .selection_conditions__item input {
-  width: 100%;
+  padding-right: 16px;
   background-image: url(../img/arrow-down.svg);
   background-size: 14px;
   background-position: center right;
@@ -1398,6 +1404,8 @@ main .search_cars__wrapper .swap {
   background-image: url(../img/Swap.svg);
   background-size: 24px;
   border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 20px 0px rgba(16, 50, 147, 0.32);
+          box-shadow: 4px 4px 20px 0px rgba(16, 50, 147, 0.32);
 }
 main .category__items {
   display: -webkit-box;
@@ -2040,5 +2048,15 @@ main .recommended_cars__wrapper_top a {
     margin-left: 0;
     font-size: 12px;
     line-height: 1.5em;
+  }
+}
+@media (max-width: 375px) {
+  main .search_cars__wrapper_item .inner .selection_conditions__item {
+    padding: 0 15px;
+  }
+}
+@media (max-width: 320px) {
+  main .search_cars__wrapper_item .inner .selection_conditions__item {
+    padding: 0 5px;
   }
 }
