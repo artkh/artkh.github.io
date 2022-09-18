@@ -1467,17 +1467,23 @@ main .category__items .item .inner .top_info__favorites {
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
-  -webkit-transition: 0.1s ease-in;
-  -o-transition: 0.1s ease-in;
-  transition: 0.1s ease-in;
 }
-main .category__items .item .inner .top_info__favorites:hover {
-  -webkit-transform: scale(1.15, 1.15);
-      -ms-transform: scale(1.15, 1.15);
-          transform: scale(1.15, 1.15);
+@-webkit-keyframes animAddFavorite {
+  50% {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+  }
+}
+@keyframes animAddFavorite {
+  50% {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+  }
 }
 main .category__items .item .inner .top_info__favorites.in_favorites {
   background-image: url(../img/heart_red.svg);
+  -webkit-animation: animAddFavorite 0.3s ease-in-out;
+          animation: animAddFavorite 0.3s ease-in-out;
 }
 main .category__items .item .inner .image {
   display: block;
@@ -1597,7 +1603,7 @@ main .recommended_cars__wrapper_top a {
   padding: 0 20px;
 }
 main .recommended_cars__wrapper {
-  margin-top: 10px;
+  margin-top: 42px;
 }
 
 footer.footer .footer__wrapper {
@@ -1988,7 +1994,7 @@ main .recommended_cars__wrapper_top a {
     margin-bottom: 0;
   }
   main .recommended_cars__wrapper {
-    margin-top: 10px;
+    margin-top: 32px;
   }
   main .recommended_cars__wrapper_top {
     padding: 0;

@@ -1,0 +1,69 @@
+{
+  "listCars": [
+    {
+      "name": "Koenigsegg",
+      "class": "Sport",
+      "inFavorites": true,
+      "image": "img/category1.png",
+      "fuel": "90",
+      "gearbox": "manual",
+      "people": "2",
+      "priceFinal": "99",
+      "rentTime": "day",
+      "priceDiscount": "",
+      "link": "#"
+    },
+    {
+      "name": "Nissan GT - R",
+      "class": "Sport",
+      "inFavorites": false,
+      "image": "img/category3.png",
+      "fuel": "80",
+      "gearbox": "manual",
+      "people": "2",
+      "priceFinal": "80",
+      "rentTime": "day",
+      "priceDiscount": "100",
+      "link": "##"
+    },
+    {
+      "name": "Rolls - Royce",
+      "class": "Sedan",
+      "inFavorites": true,
+      "image": "img/category2.png",
+      "fuel": "70",
+      "gearbox": "manual",
+      "people": "4",
+      "priceFinal": "96",
+      "rentTime": "day",
+      "priceDiscount": "",
+      "link": "###"
+    },
+    {
+      "name": "Nissan GT - R",
+      "class": "Sport",
+      "inFavorites": false,
+      "image": "img/category3.png",
+      "fuel": "80",
+      "gearbox": "manual",
+      "people": "2",
+      "priceFinal": "80",
+      "rentTime": "day",
+      "priceDiscount": "100",
+      "link": "####"
+    },
+    {
+      "name": "Nissan GT - R",
+      "class": "Sport",
+      "inFavorites": false,
+      "image": "img/category3.png",
+      "fuel": "80",
+      "gearbox": "manual",
+      "people": "2",
+      "priceFinal": "80",
+      "rentTime": "day",
+      "priceDiscount": "100",
+      "link": "####"
+    }
+  ]
+}

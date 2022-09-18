@@ -1,8 +1,3 @@
-$(function () {
-
-});
-
-
 document.addEventListener('DOMContentLoaded', function () {
 
   // поисковая строка в хидере
@@ -87,6 +82,50 @@ document.addEventListener('DOMContentLoaded', function () {
         this.classList.toggle('in_favorites');
       })
     }
+  }
+  //end
+
+  // вставка информации о авто из json
+  function openCarsInform(url, section) {
+    fetch(url).then(response => response.json())
+    .then(result => setInformCars(result, section)); 
+  }
+
+  function setInformCars (result, section) {
+    let listCars = result.listCars;
+    let elem = section.querySelector('.category__items').querySelectorAll('.item');
+
+    for(let i = 0; i < listCars.length; i++) {
+      elem[i].querySelector('.top_info__name').innerHTML = listCars[i].name;
+      elem[i].querySelector('.top_info__class').innerHTML = listCars[i].class;
+
+      if(listCars[i].inFavorites) {
+        elem[i].querySelector('.top_info__favorites').classList.add('in_favorites')
+      }
+
+      for (let j = 0; j < elem[i].querySelectorAll('a').length; j++) {
+        elem[i].querySelectorAll('a')[j].href = listCars[i].link;
+      }
+
+      elem[i].querySelector('.image').querySelector('img').src = listCars[i].image;
+      elem[i].querySelector('.spec').querySelector('.fuel').innerHTML = `${listCars[i].fuel}l`;
+      elem[i].querySelector('.spec').querySelector('.gearbox__manual').innerHTML = listCars[i].gearbox;
+      elem[i].querySelector('.spec').querySelector('.people').innerHTML = `${listCars[i].people} People`;
+      elem[i].querySelector('.rent').querySelector('.rent__price_finalcost').innerHTML = `${listCars[i].priceFinal}.00/`;
+      elem[i].querySelector('.rent').querySelector('.rent__price_finalcost').innerHTML = `${listCars[i].priceFinal}.00/`;
+      elem[i].querySelector('.rent').querySelector('.rent__price_time').innerHTML = listCars[i].rentTime;
+
+      if(listCars[i].priceDiscount) {
+        let div = document.createElement('div');
+        div.className = "rent__price_discount";
+        div.innerHTML = `$${listCars[i].priceDiscount}.00`;
+        elem[i].querySelector('.rent').querySelector('.rent__price').append(div);
+      }
+    }
+  }
+
+  if(mostPopular) {
+    openCarsInform('../json/popular-cars.json', mostPopular);
   }
   //end
 })
