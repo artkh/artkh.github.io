@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   if(mostPopular) {
-    openCarsInform('../json/popular-cars.json', mostPopular);
+    openCarsInform('https://artkh.github.io/car-rent/json/popular-cars.json', mostPopular);
   }
   //end
 })
