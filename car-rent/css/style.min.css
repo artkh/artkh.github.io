@@ -1921,7 +1921,7 @@ main .topslider__wrapper_item .primary_button {
   }
   main .category__items + .more-car {
     padding: 0;
-    margin-top: 48px;
+    padding-top: 48px;
   }
   main .most_popular.container {
     padding: 0;
