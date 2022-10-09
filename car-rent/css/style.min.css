@@ -1236,7 +1236,8 @@ header.header .container .header__wrapper nav.nav #favorits {
 header.header .container .header__wrapper nav.nav #notifications {
   background-image: url(../img/notification.svg);
 }
-header.header .container .header__wrapper nav.nav #notifications.active::before {
+header.header .container .header__wrapper nav.nav #notifications.active::before,
+header.header .container .header__wrapper nav.nav #favorits.active::before {
   content: "";
   position: absolute;
   width: 11px;
@@ -1419,9 +1420,6 @@ main .category__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-right: -32px;
